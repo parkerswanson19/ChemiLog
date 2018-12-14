@@ -15,6 +15,8 @@
 		28D12E4F21C2C5EB00C0E4DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D12E4D21C2C5EB00C0E4DA /* LaunchScreen.storyboard */; };
 		28D12E5A21C2C5EB00C0E4DA /* ChemiLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D12E5921C2C5EB00C0E4DA /* ChemiLogTests.swift */; };
 		28D12E6521C2C5EB00C0E4DA /* ChemiLogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D12E6421C2C5EB00C0E4DA /* ChemiLogUITests.swift */; };
+		28ED871121C4104F00BA4AF5 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED871021C4104F00BA4AF5 /* ThirdViewController.swift */; };
+		28ED871321C410BF00BA4AF5 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED871221C410BF00BA4AF5 /* FourthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		28D12E6021C2C5EB00C0E4DA /* ChemiLogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChemiLogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D12E6421C2C5EB00C0E4DA /* ChemiLogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemiLogUITests.swift; sourceTree = "<group>"; };
 		28D12E6621C2C5EB00C0E4DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28ED871021C4104F00BA4AF5 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		28ED871221C410BF00BA4AF5 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				28D12E4221C2C5EA00C0E4DA /* AppDelegate.swift */,
 				28D12E4421C2C5EA00C0E4DA /* FirstViewController.swift */,
 				28D12E4621C2C5EA00C0E4DA /* SecondViewController.swift */,
+				28ED871021C4104F00BA4AF5 /* ThirdViewController.swift */,
+				28ED871221C410BF00BA4AF5 /* FourthViewController.swift */,
 				28D12E4821C2C5EA00C0E4DA /* Main.storyboard */,
 				28D12E4B21C2C5EB00C0E4DA /* Assets.xcassets */,
 				28D12E4D21C2C5EB00C0E4DA /* LaunchScreen.storyboard */,
@@ -261,7 +267,9 @@
 			files = (
 				28D12E4721C2C5EA00C0E4DA /* SecondViewController.swift in Sources */,
 				28D12E4321C2C5EA00C0E4DA /* AppDelegate.swift in Sources */,
+				28ED871121C4104F00BA4AF5 /* ThirdViewController.swift in Sources */,
 				28D12E4521C2C5EA00C0E4DA /* FirstViewController.swift in Sources */,
+				28ED871321C410BF00BA4AF5 /* FourthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
