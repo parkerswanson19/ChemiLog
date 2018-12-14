@@ -20,7 +20,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="First" image="first" selectedImage="first" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,7 +65,7 @@
         <!--Third-->
         <scene sceneID="Y0w-rS-TsG">
             <objects>
-                <viewController id="vLB-Wy-U8V" sceneMemberID="viewController">
+                <viewController id="vLB-Wy-U8V" customClass="ThirdViewController" customModule="ChemiLog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b5c-Ab-1iD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,8 +82,8 @@
         <!--Fourth-->
         <scene sceneID="ixy-IV-IOV">
             <objects>
-                <viewController id="epm-kk-Zag" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TJg-9Q-0zC">
+                <viewController id="epm-kk-Zag" customClass="FourthViewController" customModule="ChemiLog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TJg-9Q-0zC" customClass="UIViewCo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
