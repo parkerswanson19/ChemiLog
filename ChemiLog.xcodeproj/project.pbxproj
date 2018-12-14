@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26D8E37821C418D20046ED90 /* Chemical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D8E37721C418D20046ED90 /* Chemical.swift */; };
 		28D12E4321C2C5EA00C0E4DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D12E4221C2C5EA00C0E4DA /* AppDelegate.swift */; };
 		28D12E4521C2C5EA00C0E4DA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D12E4421C2C5EA00C0E4DA /* FirstViewController.swift */; };
 		28D12E4721C2C5EA00C0E4DA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D12E4621C2C5EA00C0E4DA /* SecondViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26D8E37721C418D20046ED90 /* Chemical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chemical.swift; sourceTree = "<group>"; };
 		28D12E3F21C2C5EA00C0E4DA /* ChemiLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChemiLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D12E4221C2C5EA00C0E4DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28D12E4421C2C5EA00C0E4DA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				28D12E4B21C2C5EB00C0E4DA /* Assets.xcassets */,
 				28D12E4D21C2C5EB00C0E4DA /* LaunchScreen.storyboard */,
 				28D12E5021C2C5EB00C0E4DA /* Info.plist */,
+				26D8E37721C418D20046ED90 /* Chemical.swift */,
 			);
 			path = ChemiLog;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28D12E4721C2C5EA00C0E4DA /* SecondViewController.swift in Sources */,
+				26D8E37821C418D20046ED90 /* Chemical.swift in Sources */,
 				28D12E4321C2C5EA00C0E4DA /* AppDelegate.swift in Sources */,
 				28ED871121C4104F00BA4AF5 /* ThirdViewController.swift in Sources */,
 				28D12E4521C2C5EA00C0E4DA /* FirstViewController.swift in Sources */,
