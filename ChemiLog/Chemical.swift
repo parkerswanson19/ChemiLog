@@ -32,4 +32,12 @@ class Chemical{
         
     }
     
+    func addAmount(amount: Int){
+        self.quantity += amount
+    }
+    
+    func subtractAmount(amount: Int){
+        self.quantity -= amount
+    }
+    
 }
