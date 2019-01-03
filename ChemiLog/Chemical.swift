@@ -13,22 +13,33 @@ class Chemical{
     var quantity: Int
     var name: String
     var catalogNumber: Int
-    var catalogLink: URL
+    var catalogLink: String
     var lastRefill: Date
     var nextRefill: Date
     var usedLabs: [String]
     var icon: String
+    var amount: Int
     
-    init(quantity: Int, name: String, catalogNumber: Int, catalogLink: URL, lastRefill: Date, nextRefill: Date, usedLabs: [String], icon: String){
+    init(quantity: Int, name: String, catalogNumber: Int, lastRefill: Date, nextRefill: Date, usedLabs: [String], icon: String, amount: Int){
         
         self.quantity = quantity
         self.name = name
         self.catalogNumber = catalogNumber
-        self.catalogLink = catalogLink
         self.lastRefill = lastRefill
         self.nextRefill = nextRefill
         self.usedLabs = usedLabs
         self.icon = icon
+        self.amount = amount
+        
+        var url1: String
+        var url2: String
+        var url3: String
+        url1 = "https://www.flinnsci.com/" + "\(amount)" + "-"
+        url2 = name + "-" + "\(quantity)"
+        url3 = "/" + "\(catalogNumber)" + "/"
+        let url = url1 + url2 + url3
+        
+        self.catalogLink = url
         
     }
     
@@ -40,4 +51,5 @@ class Chemical{
         self.quantity -= amount
     }
     
+ 
 }
