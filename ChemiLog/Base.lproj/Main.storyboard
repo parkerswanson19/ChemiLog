@@ -28,9 +28,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obh-P0-Y4G">
-                                <rect key="frame" x="30" y="43" width="64" height="64"/>
+                                <rect key="frame" x="36" y="51" width="57" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="chemical-icon-png-6_25x25"/>
+                                <state key="normal" image="flask"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -102,7 +102,7 @@
         <scene sceneID="ixy-IV-IOV">
             <objects>
                 <viewController id="epm-kk-Zag" customClass="FourthViewController" customModule="ChemiLog" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TJg-9Q-0zC" customClass="UIViewCo">
+                    <view key="view" contentMode="scaleToFill" id="TJg-9Q-0zC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.88617795710000002" green="0.88633018730000002" blue="0.8861683011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -119,6 +119,7 @@
     <resources>
         <image name="add" width="23" height="23"/>
         <image name="chemical-icon-png-6_25x25" width="25" height="25"/>
+        <image name="flask" width="64" height="64"/>
         <image name="img_255912_25x25" width="25" height="25"/>
         <image name="plus" width="32" height="32"/>
         <image name="settings" width="23" height="23"/>
