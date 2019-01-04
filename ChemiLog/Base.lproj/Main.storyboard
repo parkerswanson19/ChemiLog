@@ -23,8 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="plus"/>
                                 <connections>
-                                    <action selector="addChem:" destination="9pv-A4-QxB" eventType="touchUpInside" id="itf-XJ-sPH"/>
-                                    <action selector="newChem:" destination="9pv-A4-QxB" eventType="touchUpInside" id="bbs-jF-WwD"/>
+                                    <action selector="newChem:" destination="9pv-A4-QxB" eventType="touchUpInside" id="mB4-97-VrH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -32,9 +31,6 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chemicals" image="chemical-icon-png-6_25x25" selectedImage="chemical-icon-png-6_25x25" id="acW-dT-cKf"/>
-                    <connections>
-                        <outlet property="addChem" destination="WWq-q1-5Uq" id="YCz-Mr-EUl"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,7 +93,7 @@
         <scene sceneID="ixy-IV-IOV">
             <objects>
                 <viewController id="epm-kk-Zag" customClass="FourthViewController" customModule="ChemiLog" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TJg-9Q-0zC">
+                    <view key="view" contentMode="scaleToFill" id="TJg-9Q-0zC" customClass="UIViewCo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.88617795710000002" green="0.88633018730000002" blue="0.8861683011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
