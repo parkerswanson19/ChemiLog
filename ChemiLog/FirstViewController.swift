@@ -15,17 +15,33 @@ class FirstViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    var buttons: [UIButton] = []
+    var xAxis = 10
+    let yAxis = 10
+    
     @IBAction func newChem(_ sender: Any) {
-        var myButton: UIButton?
-        if !(myButton != nil){
+        if (buttons.count == 0){
         let img = UIImage(named: "chemical-icon-png-6_25x25")
         let myButton = UIButton(type: UIButton.ButtonType.custom)
-        myButton.frame = CGRect.init(x: 10, y: 10, width: 100, height: 45)
+        myButton.frame = CGRect.init(x: xAxis, y: yAxis, width: 100, height: 45)
         myButton.setImage(img, for: .normal)
         myButton.addTarget(self, action: Selector(("btnTouched:")), for:.touchUpInside)
         self.view.addSubview(myButton)
-    }
+            buttons.append(myButton)
+        } else {
+            xAxis += 30
+                let img = UIImage(named: "chemical-icon-png-6_25x25")
+                let myButton = UIButton(type: UIButton.ButtonType.custom)
+            
+                myButton.frame = CGRect.init(x: xAxis, y: yAxis, width: 100, height: 45)
+                myButton.setImage(img, for: .normal)
+                myButton.addTarget(self, action: Selector(("btnTouched:")), for:.touchUpInside)
+                self.view.addSubview(myButton)
+            buttons.append(myButton)
+            
+        }
     
     }
 }
+
 
