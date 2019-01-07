@@ -26,6 +26,10 @@
                                     <action selector="newChem:" destination="9pv-A4-QxB" eventType="touchUpInside" id="mB4-97-VrH"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vg6-Ki-tzk">
+                                <rect key="frame" x="25" y="60" width="325" height="558"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
