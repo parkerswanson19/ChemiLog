@@ -26,15 +26,57 @@
                                     <action selector="newChem:" destination="9pv-A4-QxB" eventType="touchUpInside" id="mB4-97-VrH"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IXe-Gh-ify">
+                                <rect key="frame" x="12" y="56" width="351" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="c6T-ex-tD7">
+                                    <size key="itemSize" width="117" height="112"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="qrV-8a-IkN" customClass="CollectionViewCell" customModule="ChemiLog" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="117" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="117" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zv2-es-yaa">
+                                                    <rect key="frame" x="37" y="83" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.13632899209999999" green="1" blue="0.95567123350000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Zv2-es-yaa" secondAttribute="bottom" constant="8" id="9sV-nx-Hjy"/>
+                                            <constraint firstItem="Zv2-es-yaa" firstAttribute="top" secondItem="qrV-8a-IkN" secondAttribute="topMargin" constant="63" id="Qne-1e-gie"/>
+                                            <constraint firstItem="Zv2-es-yaa" firstAttribute="leading" secondItem="qrV-8a-IkN" secondAttribute="leadingMargin" constant="21" id="SZh-tc-mHc"/>
+                                            <constraint firstItem="Zv2-es-yaa" firstAttribute="centerX" secondItem="qrV-8a-IkN" secondAttribute="centerX" id="w0l-sk-XGj"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="chemicalName" destination="Zv2-es-yaa" id="SFM-s0-pdd"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chemicals" image="chemical-icon-png-6_25x25" selectedImage="chemical-icon-png-6_25x25" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="collectionView" destination="IXe-Gh-ify" id="0dX-JW-gZF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="750" y="-414"/>
         </scene>
         <!--Scanner-->
         <scene sceneID="wg7-f3-ORb">
