@@ -10,7 +10,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
-    let chemicalList = ["Oxygen","Carbon","Neon","Neon"]
+    let chemicalList = ["Oxygen","Carbon","Neon","Neon","hello"]
      @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
