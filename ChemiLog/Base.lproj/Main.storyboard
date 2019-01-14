@@ -23,6 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="plus"/>
                                 <connections>
+                                    <action selector="addChem:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Btj-5u-PYe"/>
                                     <action selector="newChem:" destination="9pv-A4-QxB" eventType="touchUpInside" id="mB4-97-VrH"/>
                                 </connections>
                             </button>

@@ -19,6 +19,9 @@ class FirstViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func addChem(_ sender: Any) {
+        
+    }
     
     }
 
@@ -32,4 +35,6 @@ extension FirstViewController: UICollectionViewDataSource{
         cell.chemicalName.text = chemicalList[indexPath.row]
         return cell
     }
+    
+    
 }
