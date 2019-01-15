@@ -9,8 +9,9 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
-    let chemicalList = ["Oxygen","Carbon","Neon","Neon","hello"]
+    let chemicalList2 = [Chemical] ()
+    
+    let chemicalList = ["Oxygen","Carbon","Neon","Neon","hello", "Titanium", "Hunter"]
      @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
