@@ -14,13 +14,13 @@ class Chemical{
     var name: String
     var catalogNumber: Int
     var catalogLink: String
-    var lastRefill: Date
-    var nextRefill: Date
-    var usedLabs: [String]
+    var lastRefill: Int
+    var nextRefill: Int
+    var usedLabs: String
     var icon: String
     var amount: Int
     
-    init(quantity: Int, name: String, catalogNumber: Int, lastRefill: Date, nextRefill: Date, usedLabs: [String], icon: String, amount: Int){
+    init(quantity: Int, name: String, catalogNumber: Int, lastRefill: Int, nextRefill: Int, usedLabs: String, icon: String, amount: Int){
         
         self.quantity = quantity
         self.name = name

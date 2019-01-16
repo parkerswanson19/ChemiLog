@@ -9,9 +9,11 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-    let chemicalList2 = [Chemical] ()
-    
-    let chemicalList = ["Oxygen","Carbon","Neon","Neon","hello", "Titanium", "Hunter"]
+    var chemicalList2 = [
+        Chemical(quantity: 300, name: "Oxygen", catalogNumber: 45, lastRefill: 517, nextRefill: 617, usedLabs: "PennyLab", icon: "Flask", amount: 100),
+        Chemical(quantity: 300, name: "Neon", catalogNumber: 45, lastRefill: 517, nextRefill: 617, usedLabs: "PennyLab", icon: "Flask", amount: 100)
+    ]
+
      @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -28,12 +30,12 @@ class FirstViewController: UIViewController {
 
 extension FirstViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return chemicalList.count
+        return chemicalList2.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
-        cell.chemicalName.text = chemicalList[indexPath.row]
+        cell.chemicalName.text = chemicalList2[indexPath.row].name
         return cell
     }
     
