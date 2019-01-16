@@ -25,6 +25,9 @@
                                 <connections>
                                     <action selector="addChem:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Btj-5u-PYe"/>
                                     <action selector="newChem:" destination="9pv-A4-QxB" eventType="touchUpInside" id="mB4-97-VrH"/>
+                                    <segue destination="tEF-Us-GMc" kind="popoverPresentation" popoverAnchorView="WWq-q1-5Uq" id="eOF-BS-yCE">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IXe-Gh-ify">
@@ -77,6 +80,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-414.24287856071965"/>
+        </scene>
+        <!--Manual Add-->
+        <scene sceneID="Pwz-Yj-Edv">
+            <objects>
+                <viewController title="Manual Add" id="tEF-Us-GMc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AqT-BD-sYT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3FN-f5-UOH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPp-Ms-70h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1466" y="-414"/>
         </scene>
         <!--Scanner-->
         <scene sceneID="wg7-f3-ORb">
