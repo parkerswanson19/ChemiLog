@@ -23,9 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="plus"/>
                                 <connections>
-                                    <action selector="addChem:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Btj-5u-PYe"/>
-                                    <action selector="newChem:" destination="9pv-A4-QxB" eventType="touchUpInside" id="mB4-97-VrH"/>
-                                    <segue destination="tEF-Us-GMc" kind="custom" identifier="manualAdd" id="oX4-Ah-H4o"/>
+                                    <action selector="toAddChem:" destination="9pv-A4-QxB" eventType="touchUpInside" id="05u-B2-AyH"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IXe-Gh-ify">
@@ -62,7 +60,6 @@
                                         <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="chemicalName" destination="Zv2-es-yaa" id="SFM-s0-pdd"/>
-                                            <segue destination="cZd-zi-Xp0" kind="showDetail" id="TzR-af-2tx"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -74,6 +71,7 @@
                     <tabBarItem key="tabBarItem" title="Chemicals" image="chemical-icon-png-6_25x25" selectedImage="chemical-icon-png-6_25x25" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="collectionView" destination="IXe-Gh-ify" id="0dX-JW-gZF"/>
+                        <segue destination="tEF-Us-GMc" kind="show" identifier="toManualAdd" id="Q4C-Kh-b7z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -84,16 +82,33 @@
         <scene sceneID="Pwz-Yj-Edv">
             <objects>
                 <viewController title="Manual Add" id="tEF-Us-GMc" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AqT-BD-sYT">
+                    <view key="view" contentMode="scaleToFill" id="uKd-nw-w8v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ChemicalName:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFx-pK-MCv">
+                                <rect key="frame" x="68" y="210" width="125" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SQ3-MV-HfE">
+                                <rect key="frame" x="192" y="215" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.16945025720000001" blue="0.96705203799999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="3FN-f5-UOH"/>
+                        <viewLayoutGuide key="safeArea" id="wrv-Fg-9Si"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPp-Ms-70h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466" y="-414"/>
+            <point key="canvasLocation" x="1464.8" y="-414.24287856071965"/>
         </scene>
         <!--Scanner-->
         <scene sceneID="wg7-f3-ORb">
@@ -110,30 +125,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="uaU-c5-dYd">
-            <objects>
-                <viewController id="cZd-zi-Xp0" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FxZ-IX-ZsF" customClass="ChemicalInformation">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QpM-BD-mtc">
-                                <rect key="frame" x="139" y="51" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" red="0.29229910710000001" green="0.46325334820000003" blue="0.94997209819999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <viewLayoutGuide key="safeArea" id="PZt-dC-7Ac"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W7G-mI-GaA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1616" y="356"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
