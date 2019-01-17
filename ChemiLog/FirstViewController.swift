@@ -22,11 +22,11 @@ class FirstViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func addChem(_ sender: Any) {
-        
+    @IBAction func toAddChem(_ sender: Any) {
+        performSegue(withIdentifier: "toManualAdd", sender: self)
     }
     
-    }
+}
 
 extension FirstViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
