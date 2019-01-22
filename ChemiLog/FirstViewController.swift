@@ -25,6 +25,9 @@ class FirstViewController: UIViewController {
     @IBAction func toAddChem(_ sender: Any) {
         performSegue(withIdentifier: "toManualAdd", sender: self)
     }
+    @IBAction func toFirstView(unwindSegue: UIStoryboardSegue){}
+    
+
     
 }
 
