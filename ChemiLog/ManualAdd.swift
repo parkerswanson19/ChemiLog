@@ -19,9 +19,13 @@ class ManualAddController: UIViewController {
     
     
     
-    var newChem = Chemical.init(quantity: "", name: "", catalogNumber: "", lastRefill: "", nextRefill: "", usedLabs: "", icon: "", amount: "")
+    var newChem = Chemical.init(quantity: 20, name: "", catalogNumber: 20, lastRefill: "", nextRefill: "", usedLabs: "", icon: "", amount: 20)
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
+        
+    
 }

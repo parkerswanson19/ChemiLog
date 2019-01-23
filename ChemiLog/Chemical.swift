@@ -10,17 +10,17 @@ import Foundation
 
 class Chemical{
     
-    var quantity: String
+    var quantity: Int
     var name: String
-    var catalogNumber: String
+    var catalogNumber: Int
     var catalogLink: String
     var lastRefill: String
     var nextRefill: String
     var usedLabs: String
     var icon: String
-    var amount: String
+    var amount: Int
     
-    init(quantity: String, name: String, catalogNumber: String, lastRefill: String, nextRefill: String, usedLabs: String, icon: String, amount: String){
+    init(quantity: Int, name: String, catalogNumber: Int, lastRefill: String, nextRefill: String, usedLabs: String, icon: String, amount: Int){
         
         self.quantity = quantity
         self.name = name

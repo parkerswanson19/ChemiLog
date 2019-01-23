@@ -10,8 +10,8 @@ import UIKit
 
 class FirstViewController: UIViewController {
     var chemicalList = [
-        Chemical(quantity: "300", name: "Oxygen", catalogNumber: "45", lastRefill: "517", nextRefill: "617", usedLabs: "PennyLab", icon: "Flask", amount: "100"),
-        Chemical(quantity: "300", name: "Neon", catalogNumber: "45", lastRefill: "517", nextRefill: "617", usedLabs: "PennyLab", icon: "Flask", amount: "100")
+        Chemical(quantity: 300, name: "Oxygen", catalogNumber: 45, lastRefill: "517", nextRefill: "617", usedLabs: "PennyLab", icon: "Flask", amount: 100),
+        Chemical(quantity: 300, name: "Neon", catalogNumber: 45, lastRefill: "517", nextRefill: "617", usedLabs: "PennyLab", icon: "Flask", amount: 100)
     ]
 
      @IBOutlet weak var collectionView: UICollectionView!
@@ -31,18 +31,19 @@ class FirstViewController: UIViewController {
     {
             if let senderVC = sender.source as? ManualAddController{
                 senderVC.newChem.name = senderVC.nameIn.text ?? " "
-                senderVC.newChem.quantity = senderVC.quantityIn.text ?? " "
-                senderVC.newChem.catalogNumber = senderVC.catalogIn.text ?? " "
+                senderVC.newChem.quantity = Int(senderVC.quantityIn.text ?? "0") ?? 0
+                senderVC.newChem.catalogNumber = Int(senderVC.catalogIn.text ?? "0") ?? 0
                 senderVC.newChem.lastRefill = senderVC.lastRefillIn.text ?? " "
                 senderVC.newChem.nextRefill = senderVC.nextUseIn.text ?? " "
                 senderVC.newChem.catalogLink = " "
                 senderVC.newChem.icon = "Flask"
                 senderVC.newChem.usedLabs = " "
-                senderVC.newChem.amount = " "
+                senderVC.newChem.amount = 0
             chemicalList.append(senderVC.newChem)
         }
         collectionView.reloadData()
     }
+
     
 }
 
