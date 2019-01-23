@@ -10,17 +10,17 @@ import Foundation
 
 class Chemical{
     
-    var quantity: Int
+    var quantity: String
     var name: String
-    var catalogNumber: Int
+    var catalogNumber: String
     var catalogLink: String
-    var lastRefill: Int
-    var nextRefill: Int
+    var lastRefill: String
+    var nextRefill: String
     var usedLabs: String
     var icon: String
-    var amount: Int
+    var amount: String
     
-    init(quantity: Int, name: String, catalogNumber: Int, lastRefill: Int, nextRefill: Int, usedLabs: String, icon: String, amount: Int){
+    init(quantity: String, name: String, catalogNumber: String, lastRefill: String, nextRefill: String, usedLabs: String, icon: String, amount: String){
         
         self.quantity = quantity
         self.name = name
@@ -43,13 +43,13 @@ class Chemical{
         
     }
     
-    func addAmount(amount: Int){
+    /*func addAmount(amount: Int){
         self.quantity += amount
     }
     
     func subtractAmount(amount: Int){
         self.quantity -= amount
     }
-    
+*/
  
 }

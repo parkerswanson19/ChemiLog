@@ -91,7 +91,7 @@
         <!--Manual Add-->
         <scene sceneID="Pwz-Yj-Edv">
             <objects>
-                <viewController title="Manual Add" id="tEF-Us-GMc" sceneMemberID="viewController">
+                <viewController title="Manual Add" id="tEF-Us-GMc" customClass="ManualAddController" customModule="ChemiLog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uKd-nw-w8v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -165,6 +165,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <segue destination="BLP-Cb-e3q" kind="unwind" unwindAction="toSubmitNewChem:" id="dVO-pC-8WE"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="New Chemical" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SQ3-MV-HfE">
                                 <rect key="frame" x="74" y="38" width="226" height="42"/>
@@ -175,7 +178,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHr-74-el3">
-                                <rect key="frame" x="14" y="11" width="35" height="35"/>
+                                <rect key="frame" x="16" y="18" width="35" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back" image="left"/>
                                 <connections>
@@ -186,6 +189,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wrv-Fg-9Si"/>
                     </view>
+                    <connections>
+                        <outlet property="catalogIn" destination="uJk-35-eFp" id="mIO-kX-5Ta"/>
+                        <outlet property="lastRefillIn" destination="yUG-K4-Hf8" id="x4q-6K-JH9"/>
+                        <outlet property="nameIn" destination="SQ3-MV-HfE" id="9JG-xd-wYA"/>
+                        <outlet property="nextUseIn" destination="Ssw-Ic-oTn" id="9Na-x5-Zfq"/>
+                        <outlet property="quantityIn" destination="Gs1-cg-Koo" id="giL-U2-4CZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPp-Ms-70h" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BLP-Cb-e3q" userLabel="Exit" sceneMemberID="exit"/>
