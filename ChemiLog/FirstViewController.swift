@@ -9,7 +9,7 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-    var chemicalList2 = [
+    var chemicalList = [
         Chemical(quantity: 300, name: "Oxygen", catalogNumber: 45, lastRefill: 517, nextRefill: 617, usedLabs: "PennyLab", icon: "Flask", amount: 100),
         Chemical(quantity: 300, name: "Neon", catalogNumber: 45, lastRefill: 517, nextRefill: 617, usedLabs: "PennyLab", icon: "Flask", amount: 100)
     ]
@@ -27,18 +27,22 @@ class FirstViewController: UIViewController {
     }
     @IBAction func toFirstView(unwindSegue: UIStoryboardSegue){}
     
+    @IBAction func toSubmitChem(unwindSegue: UIStoryboardSegue){
+        
+        
+    }
 
     
 }
 
 extension FirstViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return chemicalList2.count
+        return chemicalList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
-        cell.chemicalName.text = chemicalList2[indexPath.row].name
+        cell.chemicalName.text = chemicalList[indexPath.row].name
         return cell
     }
     

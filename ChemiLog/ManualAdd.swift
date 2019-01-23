@@ -11,4 +11,20 @@ import UIKit
 
 class ManualAddController: UIViewController {
     
+    @IBOutlet weak var submitBtn: UIButton!
+    @IBOutlet weak var name2: UITextField!
+    @IBOutlet weak var catalog2: UITextField!
+    @IBOutlet weak var quantity2: UITextField!
+    @IBOutlet weak var lastRefill2: UITextField!
+    @IBOutlet weak var nextUse2: UITextField!
+    
+    var added: Chemical!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
+        
+    
 }
