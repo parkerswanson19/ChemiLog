@@ -166,7 +166,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <segue destination="BLP-Cb-e3q" kind="unwind" unwindAction="toSubmitChemWithUnwindSegue:" id="j62-Kx-Pge"/>
+                                    <segue destination="BLP-Cb-e3q" kind="unwind" unwindAction="toSubmitNewChem:" id="dVO-pC-8WE"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="New Chemical" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SQ3-MV-HfE">
@@ -178,7 +178,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHr-74-el3">
-                                <rect key="frame" x="14" y="11" width="35" height="35"/>
+                                <rect key="frame" x="16" y="18" width="35" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back" image="left"/>
                                 <connections>
@@ -190,12 +190,11 @@
                         <viewLayoutGuide key="safeArea" id="wrv-Fg-9Si"/>
                     </view>
                     <connections>
-                        <outlet property="catalog2" destination="uJk-35-eFp" id="Dyp-gX-z3t"/>
-                        <outlet property="lastRefill2" destination="yUG-K4-Hf8" id="YTp-cy-Qke"/>
-                        <outlet property="name2" destination="SQ3-MV-HfE" id="lVx-ei-NPm"/>
-                        <outlet property="nextUse2" destination="Ssw-Ic-oTn" id="N2D-d1-MAq"/>
-                        <outlet property="quantity2" destination="Gs1-cg-Koo" id="qxG-4d-jCO"/>
-                        <outlet property="submitBtn" destination="Ujj-nD-32A" id="hL3-Xz-Wpj"/>
+                        <outlet property="catalogIn" destination="uJk-35-eFp" id="mIO-kX-5Ta"/>
+                        <outlet property="lastRefillIn" destination="yUG-K4-Hf8" id="x4q-6K-JH9"/>
+                        <outlet property="nameIn" destination="SQ3-MV-HfE" id="9JG-xd-wYA"/>
+                        <outlet property="nextUseIn" destination="Ssw-Ic-oTn" id="9Na-x5-Zfq"/>
+                        <outlet property="quantityIn" destination="Gs1-cg-Koo" id="giL-U2-4CZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPp-Ms-70h" userLabel="First Responder" sceneMemberID="firstResponder"/>
