@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		264B45F621FA1F63007DBF5C /* Screen Shot 2019-01-23 at 4.44.03 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 264B45F521FA1F63007DBF5C /* Screen Shot 2019-01-23 at 4.44.03 PM.png */; };
+		264B45F821FB760D007DBF5C /* persistentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264B45F721FB760D007DBF5C /* persistentData.swift */; };
 		26D8E37821C418D20046ED90 /* Chemical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D8E37721C418D20046ED90 /* Chemical.swift */; };
 		26D8E37A21C809740046ED90 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D8E37921C809740046ED90 /* Inventory.swift */; };
 		2846BB3F21E65A180059E8E3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846BB3E21E65A180059E8E3 /* CollectionViewCell.swift */; };
@@ -20,7 +22,6 @@
 		28D12E6521C2C5EB00C0E4DA /* ChemiLogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D12E6421C2C5EB00C0E4DA /* ChemiLogUITests.swift */; };
 		28ED871121C4104F00BA4AF5 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED871021C4104F00BA4AF5 /* ThirdViewController.swift */; };
 		28ED871321C410BF00BA4AF5 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED871221C410BF00BA4AF5 /* FourthViewController.swift */; };
-		8B88C05B21F925D200FDB165 /* Screen Shot 2019-01-23 at 4.44.03 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B88C05A21F925D200FDB165 /* Screen Shot 2019-01-23 at 4.44.03 PM.png */; };
 		8B88C05D21F9297400FDB165 /* ChemicalDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B88C05C21F9297400FDB165 /* ChemicalDetails.swift */; };
 		8BCF6BEF21EF986D003602A9 /* ManualAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCF6BEE21EF986D003602A9 /* ManualAdd.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		264B45F521FA1F63007DBF5C /* Screen Shot 2019-01-23 at 4.44.03 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2019-01-23 at 4.44.03 PM.png"; sourceTree = "<group>"; };
+		264B45F721FB760D007DBF5C /* persistentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persistentData.swift; sourceTree = "<group>"; };
 		26D8E37721C418D20046ED90 /* Chemical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chemical.swift; sourceTree = "<group>"; };
 		26D8E37921C809740046ED90 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		2846BB3E21E65A180059E8E3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -62,7 +65,6 @@
 		28D12E6621C2C5EB00C0E4DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28ED871021C4104F00BA4AF5 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		28ED871221C410BF00BA4AF5 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		8B88C05A21F925D200FDB165 /* Screen Shot 2019-01-23 at 4.44.03 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2019-01-23 at 4.44.03 PM.png"; path = "../../Screen Shot 2019-01-23 at 4.44.03 PM.png"; sourceTree = "<group>"; };
 		8B88C05C21F9297400FDB165 /* ChemicalDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemicalDetails.swift; sourceTree = "<group>"; };
 		8BCF6BEE21EF986D003602A9 /* ManualAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAdd.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,13 +123,14 @@
 				28ED871021C4104F00BA4AF5 /* ThirdViewController.swift */,
 				28ED871221C410BF00BA4AF5 /* FourthViewController.swift */,
 				2846BB3E21E65A180059E8E3 /* CollectionViewCell.swift */,
+				264B45F721FB760D007DBF5C /* persistentData.swift */,
 				8BCF6BEE21EF986D003602A9 /* ManualAdd.swift */,
 				8B88C05C21F9297400FDB165 /* ChemicalDetails.swift */,
 				28D12E4821C2C5EA00C0E4DA /* Main.storyboard */,
 				28D12E4B21C2C5EB00C0E4DA /* Assets.xcassets */,
 				28D12E4D21C2C5EB00C0E4DA /* LaunchScreen.storyboard */,
 				28D12E5021C2C5EB00C0E4DA /* Info.plist */,
-				8B88C05A21F925D200FDB165 /* Screen Shot 2019-01-23 at 4.44.03 PM.png */,
+				264B45F521FA1F63007DBF5C /* Screen Shot 2019-01-23 at 4.44.03 PM.png */,
 				26D8E37721C418D20046ED90 /* Chemical.swift */,
 				26D8E37921C809740046ED90 /* Inventory.swift */,
 			);
@@ -258,8 +261,8 @@
 			files = (
 				28D12E4F21C2C5EB00C0E4DA /* LaunchScreen.storyboard in Resources */,
 				28D12E4C21C2C5EB00C0E4DA /* Assets.xcassets in Resources */,
+				264B45F621FA1F63007DBF5C /* Screen Shot 2019-01-23 at 4.44.03 PM.png in Resources */,
 				28D12E4A21C2C5EA00C0E4DA /* Main.storyboard in Resources */,
-				8B88C05B21F925D200FDB165 /* Screen Shot 2019-01-23 at 4.44.03 PM.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +293,7 @@
 				26D8E37A21C809740046ED90 /* Inventory.swift in Sources */,
 				8BCF6BEF21EF986D003602A9 /* ManualAdd.swift in Sources */,
 				28D12E4321C2C5EA00C0E4DA /* AppDelegate.swift in Sources */,
+				264B45F821FB760D007DBF5C /* persistentData.swift in Sources */,
 				28ED871121C4104F00BA4AF5 /* ThirdViewController.swift in Sources */,
 				28D12E4521C2C5EA00C0E4DA /* FirstViewController.swift in Sources */,
 				8B88C05D21F9297400FDB165 /* ChemicalDetails.swift in Sources */,
