@@ -118,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				28D12E4221C2C5EA00C0E4DA /* AppDelegate.swift */,
+				8B88C05C21F9297400FDB165 /* ChemicalDetails.swift */,
 				28D12E4421C2C5EA00C0E4DA /* FirstViewController.swift */,
 				28D12E4621C2C5EA00C0E4DA /* SecondViewController.swift */,
 				28ED871021C4104F00BA4AF5 /* ThirdViewController.swift */,
@@ -125,7 +126,6 @@
 				2846BB3E21E65A180059E8E3 /* CollectionViewCell.swift */,
 				264B45F721FB760D007DBF5C /* persistentData.swift */,
 				8BCF6BEE21EF986D003602A9 /* ManualAdd.swift */,
-				8B88C05C21F9297400FDB165 /* ChemicalDetails.swift */,
 				28D12E4821C2C5EA00C0E4DA /* Main.storyboard */,
 				28D12E4B21C2C5EB00C0E4DA /* Assets.xcassets */,
 				28D12E4D21C2C5EB00C0E4DA /* LaunchScreen.storyboard */,
