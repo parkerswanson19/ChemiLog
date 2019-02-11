@@ -60,14 +60,7 @@ class FirstViewController: UIViewController {
         }
         collectionView.reloadData()
     }
-    @IBAction override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (sender as? ChemicalDetailsController) != nil{
-            
-        }
-        
-    }
-
-    
+   
 }
 
 extension FirstViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
