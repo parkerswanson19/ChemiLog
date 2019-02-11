@@ -60,11 +60,8 @@ class FirstViewController: UIViewController {
         }
         collectionView.reloadData()
     }
-        
-    }
-
-    
-
+   
+}
 
 extension FirstViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
