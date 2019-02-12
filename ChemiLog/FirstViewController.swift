@@ -71,6 +71,7 @@ extension FirstViewController: UICollectionViewDataSource, UICollectionViewDeleg
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         cell.chemicalName.text = chemicalList[indexPath.row].name
         cell.tag = indexPath.row
+        cell.delegate = self
         return cell
     }
     
@@ -88,5 +89,13 @@ extension FirstViewController: UICollectionViewDataSource, UICollectionViewDeleg
         }
     }
 }
-
+extension FirstViewController: CellDelegate{
+    func delete(cell: CollectionViewCell) {
+        if let indexPath = collectionView?.indexPath(for: cell){
+            chemicalList.remove(at: indexPath.row)
+            collectionView?.deleteItems(at: [indexPath])
+        }
+        
+    }
+}
 
