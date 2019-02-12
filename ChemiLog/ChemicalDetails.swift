@@ -19,7 +19,6 @@ class ChemicalDetailsController: UIViewController{
     @IBOutlet weak var detailLabs: UITextField!
     @IBOutlet weak var detailAmount: UITextField!
     
-    
     var detailName2 = ""
     var detailQuantity2 = 1
     var detailCatalog2 = 1
@@ -27,6 +26,11 @@ class ChemicalDetailsController: UIViewController{
     var detailNextRefill2 = ""
     var detailLabs2 = " "
     var detailAmount2 = 1
+    
+    @IBAction func flinnCatalog(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.flinnsci.com/1-bromobutane-100-ml/b0238/")! as URL, options: [:], completionHandler: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
