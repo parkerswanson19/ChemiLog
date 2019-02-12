@@ -115,8 +115,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
-                                    <action selector="editButtonDidTap:" destination="fjm-nn-M0E" eventType="touchUpInside" id="AVS-8K-Xoo"/>
-                                    <action selector="editButtonDidTap:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Obt-nU-t6M"/>
+                                    <action selector="toggleEdit:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3hW-F0-ify"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -130,7 +129,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-                <exit id="fjm-nn-M0E" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="748.92086330935263" y="-414.38848920863313"/>
         </scene>
