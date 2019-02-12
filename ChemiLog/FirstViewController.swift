@@ -10,6 +10,9 @@ import UIKit
 
 
 class FirstViewController: UIViewController {
+    
+    
+    
     var persistentChemical = persistentData()
     var chemicalList = [Chemical]()
 
@@ -98,5 +101,6 @@ extension FirstViewController: CellDelegate{
         }
         
     }
+    
 }
 
