@@ -94,6 +94,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="chemicalName" destination="Zv2-es-yaa" id="SFM-s0-pdd"/>
+                                            <outlet property="deleteButton" destination="hR5-Ow-Jxp" id="99L-MJ-PyK"/>
                                             <outlet property="deleteButtonBackgroundView" destination="Y0e-Hw-XQl" id="qUj-h0-gdP"/>
                                             <segue destination="r4d-aj-9VN" kind="show" identifier="showChemDetails" id="NOX-j7-qwj"/>
                                         </connections>
@@ -106,6 +107,15 @@
                                 <state key="normal" image="plus"/>
                                 <connections>
                                     <action selector="toAddChem:" destination="9pv-A4-QxB" eventType="touchUpInside" id="05u-B2-AyH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZU-Ow-4BY">
+                                <rect key="frame" x="20" y="18" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="toggleEdit:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3hW-F0-ify"/>
                                 </connections>
                             </button>
                         </subviews>

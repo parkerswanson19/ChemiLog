@@ -10,6 +10,9 @@ import UIKit
 
 
 class FirstViewController: UIViewController {
+    
+    
+    var deleteButtonExist : Bool = false
     var persistentChemical = persistentData()
     var chemicalList = [Chemical]()
 
@@ -31,6 +34,16 @@ class FirstViewController: UIViewController {
     @IBAction func toAddChem(_ sender: Any) {
         performSegue(withIdentifier: "toManualAdd", sender: self)
     }
+    @IBAction func toggleEdit(_ sender: Any) {
+        if deleteButtonExist {
+            deleteButtonExist = false
+        }
+        else{
+            deleteButtonExist = true
+        }
+        collectionView.reloadData()
+    }
+    
     @IBAction func toFirstView(unwindSegue: UIStoryboardSegue){}
     
     @IBAction func toSubmitNewChem(_ sender: UIStoryboardSegue)
@@ -72,6 +85,12 @@ extension FirstViewController: UICollectionViewDataSource, UICollectionViewDeleg
         cell.chemicalName.text = chemicalList[indexPath.row].name
         cell.tag = indexPath.row
         cell.delegate = self
+        if deleteButtonExist {
+            cell.deleteButton.isHidden = false
+        }
+        else{
+            cell.deleteButton.isHidden = true
+        }
         return cell
     }
     
@@ -107,5 +126,7 @@ extension FirstViewController: CellDelegate{
 
         }
     }
+    
+    
 }
 

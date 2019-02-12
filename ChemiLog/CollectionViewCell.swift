@@ -13,6 +13,7 @@ protocol CellDelegate: class{
 }
 class CollectionViewCell: UICollectionViewCell{
     weak var delegate: CellDelegate?
+    @IBOutlet weak var deleteButton: UIButton!
     
     @IBOutlet weak var deleteButtonBackgroundView: UIVisualEffectView!
     
@@ -21,5 +22,5 @@ class CollectionViewCell: UICollectionViewCell{
     @IBAction func deleteChemical(_ sender: Any) {
         delegate?.delete(cell: self)
     }
-
+    
 }
