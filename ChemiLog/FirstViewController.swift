@@ -59,8 +59,7 @@ class FirstViewController: UIViewController {
             persistentChemical.archive(fileName: "test1")
         }
         collectionView.reloadData()
-    }
-   
+    }   
 }
 
 extension FirstViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
