@@ -36,7 +36,7 @@ class Chemical{
         var url3: String
         url1 = "https://www.flinnsci.com/" + "\(amount)" + "-"
         url2 = name + "-" + "\(quantity)"
-        url3 = "/" + "\(catalogNumber)" + "/"
+        url3 = "-ml/" + "\(catalogNumber)" + "/"
         let url = url1 + url2 + url3
         
         self.catalogLink = url

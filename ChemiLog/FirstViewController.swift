@@ -62,8 +62,7 @@ class FirstViewController: UIViewController {
             persistentChemical.archive(fileName: "test1")
         }
         collectionView.reloadData()
-    }
-   
+    }   
 }
 
 extension FirstViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
@@ -97,9 +96,19 @@ extension FirstViewController: CellDelegate{
     func delete(cell: CollectionViewCell) {
         if let indexPath = collectionView?.indexPath(for: cell){
             chemicalList.remove(at: indexPath.row)
+            persistentChemical.savedName.remove(at: indexPath.row)
+            persistentChemical.savedQuantity.remove(at: indexPath.row)
+            persistentChemical.savedCatalogNumber.remove(at: indexPath.row)
+            persistentChemical.savedLastRefill.remove(at: indexPath.row)
+            persistentChemical.savedNextRefill.remove(at: indexPath.row)
+            persistentChemical.savedCatalogLink.remove(at: indexPath.row)
+            persistentChemical.savedIcon.remove(at: indexPath.row)
+            persistentChemical.savedUsedLabs.remove(at: indexPath.row)
+            persistentChemical.savedAmount.remove(at: indexPath.row)
+            persistentChemical.archive(fileName: "test1")
             collectionView?.deleteItems(at: [indexPath])
+
         }
-        
     }
     
 }
