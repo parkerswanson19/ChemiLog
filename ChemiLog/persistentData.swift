@@ -26,8 +26,8 @@ class persistentData: Codable{
         
         savedQuantity = [1]
         savedName = ["pop"]
-        savedCatalogNumber = ["b0238"]
-        savedCatalogLink = ["lin"]
+        savedCatalogNumber = ["b023"]
+        savedCatalogLink = ["link"]
         savedLastRefill = ["then"]
         savedNextRefill = ["ya"]
         savedUsedLabs = ["those ones"]

@@ -26,14 +26,12 @@ class ChemicalDetailsController: UIViewController{
     var detailNextRefill2 = ""
     var detailLabs2 = " "
     var detailAmount2 = 1
-    var chemList = [Chemical]()
-    var persistentChemical2 = persistentData()
-   
+    var detailCatalogLink2 = URL(string: "blah")
     
     @IBAction func flinnCatalog(_ sender: Any) {
-        print(persistentChemical2.savedCatalogLink[0])
-        let linky = persistentChemical2.savedCatalogLink[0]
-        UIApplication.shared.open(URL(string: linky)!, options: [:], completionHandler: nil )
+        let linky = detailCatalogLink2
+        print(linky)
+        UIApplication.shared.open(linky!)
     }
     //chemicalList.remove(at: indexPath.row)
     
@@ -47,6 +45,7 @@ class ChemicalDetailsController: UIViewController{
         detailNextRefill.text! = detailNextRefill2
         detailLabs.text! = detailLabs2
         detailAmount.text! = String(detailAmount2)
+        
     }
     
 }
