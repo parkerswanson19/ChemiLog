@@ -80,6 +80,7 @@ class FirstViewController: UIViewController {
         }
         collectionView.reloadData()
     }
+    //NOT WORKING Function that allows you to resumbmit the name
     @IBAction func toEditExistingChem(_ sender: UIStoryboardSegue){
         if let cell = sender as? CollectionViewCell{
         var editChem: Chemical = chemicalList[cell.tag]
