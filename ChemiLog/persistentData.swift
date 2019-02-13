@@ -13,7 +13,7 @@ class persistentData: Codable{
     
     var savedQuantity: [Int]
     var savedName: [String]
-    var savedCatalogNumber: [Int]
+    var savedCatalogNumber: [String]
     var savedCatalogLink: [String]
     var savedLastRefill: [String]
     var savedNextRefill: [String]
@@ -26,7 +26,7 @@ class persistentData: Codable{
         
         savedQuantity = [1]
         savedName = ["pop"]
-        savedCatalogNumber = [2]
+        savedCatalogNumber = ["b023"]
         savedCatalogLink = ["link"]
         savedLastRefill = ["then"]
         savedNextRefill = ["ya"]

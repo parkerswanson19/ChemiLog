@@ -21,14 +21,17 @@ class ChemicalDetailsController: UIViewController{
     
     var detailName2 = ""
     var detailQuantity2 = 1
-    var detailCatalog2 = 1
+    var detailCatalog2 = ""
     var detailLastRefill2 = ""
     var detailNextRefill2 = ""
     var detailLabs2 = " "
     var detailAmount2 = 1
+    var detailCatalogLink2 = URL(string: "blah")
     
     @IBAction func flinnCatalog(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://www.flinnsci.com/1-bromobutane-100-ml/b0238/")! as URL, options: [:], completionHandler: nil)
+        let linky = detailCatalogLink2
+        print(linky)
+        UIApplication.shared.open(linky!)
     }
     
     
@@ -37,11 +40,12 @@ class ChemicalDetailsController: UIViewController{
         print(detailName2)
         detailName.text! = detailName2
         detailQuantity.text! = String(detailQuantity2)
-        detailCatalog.text! = String(detailCatalog2)
+        detailCatalog.text! = detailCatalog2
         detailLastRefill.text! = detailLastRefill2
         detailNextRefill.text! = detailNextRefill2
         detailLabs.text! = detailLabs2
         detailAmount.text! = String(detailAmount2)
+        
     }
     
 }
