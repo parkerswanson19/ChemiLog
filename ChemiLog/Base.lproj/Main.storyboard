@@ -213,14 +213,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prototype" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBg-rd-5ki">
-                                        <rect key="frame" x="273" y="28" width="289" height="82"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mr5-Mh-eRW">
                                         <rect key="frame" x="499" y="306" width="206" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -230,6 +222,14 @@
                                             <action selector="flinnCatalog:" destination="r4d-aj-9VN" eventType="touchUpInside" id="NjZ-KU-vlC"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="New Chemical" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WSJ-a1-YDv">
+                                        <rect key="frame" x="285" y="28" width="264" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -250,7 +250,7 @@
                         <outlet property="detailCatalog" destination="2ZR-Wu-q0w" id="j7M-Rx-H6F"/>
                         <outlet property="detailLabs" destination="SK6-zD-gEF" id="wrs-Xk-Yrw"/>
                         <outlet property="detailLastRefill" destination="M9A-2K-MBD" id="x79-Sh-fgE"/>
-                        <outlet property="detailName" destination="dBg-rd-5ki" id="XCy-sJ-gnM"/>
+                        <outlet property="detailName" destination="WSJ-a1-YDv" id="FiC-Fc-ULh"/>
                         <outlet property="detailNextRefill" destination="GP1-X1-ywt" id="J4g-mN-ZLv"/>
                         <outlet property="detailQuantity" destination="Uc3-MH-WEy" id="G74-Yh-WdY"/>
                     </connections>
