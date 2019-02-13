@@ -11,7 +11,8 @@ import UIKit
 class ChemicalDetailsController: UIViewController{
     
     
-    @IBOutlet weak var detailName: UILabel!
+   
+    @IBOutlet weak var detailName: UITextField!
     @IBOutlet weak var detailQuantity: UITextField!
     @IBOutlet weak var detailCatalog: UITextField!
     @IBOutlet weak var detailLastRefill: UITextField!
