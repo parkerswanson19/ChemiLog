@@ -25,10 +25,15 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         collectionView.dataSource = self
         persistentChemical.restore(fileName: "test1")
-        for num in 0...persistentChemical.savedName.count - 1{
-            let persistentChemicalNew = Chemical(quantity: persistentChemical.savedQuantity[num], name: persistentChemical.savedName[num], catalogNumber: persistentChemical.savedCatalogNumber[num], lastRefill: persistentChemical.savedLastRefill[num], nextRefill: persistentChemical.savedNextRefill[num], usedLabs: persistentChemical.savedUsedLabs[num], icon: persistentChemical.savedIcon[num], amount: persistentChemical.savedAmount[num])
+        if persistentChemical.savedName.count > 0{
+            for num in 0...persistentChemical.savedName.count - 1{
+                let persistentChemicalNew = Chemical(quantity: persistentChemical.savedQuantity[num], name: persistentChemical.savedName[num], catalogNumber: persistentChemical.savedCatalogNumber[num], lastRefill: persistentChemical.savedLastRefill[num], nextRefill: persistentChemical.savedNextRefill[num], usedLabs: persistentChemical.savedUsedLabs[num], icon: persistentChemical.savedIcon[num], amount: persistentChemical.savedAmount[num])
                 chemicalList.append(persistentChemicalNew)
-        }
+            }
+        } //else {
+            //chemicalList.append(Chemical(quantity: 1, name: "placeHolder"
+              //  , catalogNumber: "b0238", lastRefill: "then", nextRefill: "then", usedLabs: //"then", icon: "then", amount: 1))
+        //}
         
         
         // Do any additional setup after loading the view, typically from a nib.

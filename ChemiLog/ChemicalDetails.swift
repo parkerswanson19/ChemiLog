@@ -21,7 +21,7 @@ class ChemicalDetailsController: UIViewController{
     @IBOutlet weak var detailAmount: UITextField!
     
     var detailName2 = ""
-    var detailQuantity2 = 1
+    var detailQuantity2 = 100
     var detailCatalog2 = ""
     var detailLastRefill2 = ""
     var detailNextRefill2 = ""
@@ -34,7 +34,7 @@ class ChemicalDetailsController: UIViewController{
         print(linky ?? 0)
         UIApplication.shared.open(linky!)
     }
-    
+    //chemicalList.remove(at: indexPath.row)
     
     override func viewDidLoad() {
         super.viewDidLoad()

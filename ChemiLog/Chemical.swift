@@ -38,7 +38,7 @@ class Chemical{
         url2 = name + "-" + "\(quantity)"
         url3 = "-ml/" + catalogNumber + "/"
         let url = url1 + url2 + url3
-        
+        //let url = "https://www.flinnsci.com/1-bromobutane-100-ml/b0238/"
         self.catalogLink = url
         
     }
