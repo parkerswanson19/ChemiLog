@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		264B45F821FB760D007DBF5C /* persistentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264B45F721FB760D007DBF5C /* persistentData.swift */; };
+		268C02092215D1A000F44B4E /* Lab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C02082215D1A000F44B4E /* Lab.swift */; };
 		26D8E37821C418D20046ED90 /* Chemical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D8E37721C418D20046ED90 /* Chemical.swift */; };
 		26D8E37A21C809740046ED90 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D8E37921C809740046ED90 /* Inventory.swift */; };
 		2846BB3F21E65A180059E8E3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2846BB3E21E65A180059E8E3 /* CollectionViewCell.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		264B45F721FB760D007DBF5C /* persistentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persistentData.swift; sourceTree = "<group>"; };
+		268C02082215D1A000F44B4E /* Lab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab.swift; sourceTree = "<group>"; };
 		26D8E37721C418D20046ED90 /* Chemical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chemical.swift; sourceTree = "<group>"; };
 		26D8E37921C809740046ED90 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		2846BB3E21E65A180059E8E3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				28D12E5021C2C5EB00C0E4DA /* Info.plist */,
 				8B2CA37322132AD900F1FFF5 /* Screen Shot 2019-01-23 at 4.44.03 PM.png */,
 				26D8E37721C418D20046ED90 /* Chemical.swift */,
+				268C02082215D1A000F44B4E /* Lab.swift */,
 				26D8E37921C809740046ED90 /* Inventory.swift */,
 			);
 			path = ChemiLog;
@@ -290,6 +293,7 @@
 				28D12E4721C2C5EA00C0E4DA /* SecondViewController.swift in Sources */,
 				26D8E37821C418D20046ED90 /* Chemical.swift in Sources */,
 				2846BB3F21E65A180059E8E3 /* CollectionViewCell.swift in Sources */,
+				268C02092215D1A000F44B4E /* Lab.swift in Sources */,
 				26D8E37A21C809740046ED90 /* Inventory.swift in Sources */,
 				8BCF6BEF21EF986D003602A9 /* ManualAdd.swift in Sources */,
 				28D12E4321C2C5EA00C0E4DA /* AppDelegate.swift in Sources */,
