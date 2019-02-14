@@ -31,7 +31,7 @@ class ChemicalDetailsController: UIViewController{
     
     @IBAction func flinnCatalog(_ sender: Any) {
         let linky = detailCatalogLink2
-        print(linky)
+        print(linky ?? 0)
         UIApplication.shared.open(linky!)
     }
     

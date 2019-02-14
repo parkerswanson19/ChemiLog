@@ -22,6 +22,7 @@
 		28ED871121C4104F00BA4AF5 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED871021C4104F00BA4AF5 /* ThirdViewController.swift */; };
 		28ED871321C410BF00BA4AF5 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED871221C410BF00BA4AF5 /* FourthViewController.swift */; };
 		8B2CA37422132AD900F1FFF5 /* Screen Shot 2019-01-23 at 4.44.03 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2CA37322132AD900F1FFF5 /* Screen Shot 2019-01-23 at 4.44.03 PM.png */; };
+		8B2CA3762214AD1100F1FFF5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2CA3752214AD1100F1FFF5 /* TableViewCell.swift */; };
 		8B88C05D21F9297400FDB165 /* ChemicalDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B88C05C21F9297400FDB165 /* ChemicalDetails.swift */; };
 		8BCF6BEF21EF986D003602A9 /* ManualAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCF6BEE21EF986D003602A9 /* ManualAdd.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		28ED871021C4104F00BA4AF5 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		28ED871221C410BF00BA4AF5 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		8B2CA37322132AD900F1FFF5 /* Screen Shot 2019-01-23 at 4.44.03 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2019-01-23 at 4.44.03 PM.png"; sourceTree = "<group>"; };
+		8B2CA3752214AD1100F1FFF5 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8B88C05C21F9297400FDB165 /* ChemicalDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemicalDetails.swift; sourceTree = "<group>"; };
 		8BCF6BEE21EF986D003602A9 /* ManualAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAdd.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,10 +121,11 @@
 			children = (
 				28D12E4221C2C5EA00C0E4DA /* AppDelegate.swift */,
 				28D12E4421C2C5EA00C0E4DA /* FirstViewController.swift */,
+				2846BB3E21E65A180059E8E3 /* CollectionViewCell.swift */,
 				28D12E4621C2C5EA00C0E4DA /* SecondViewController.swift */,
 				28ED871021C4104F00BA4AF5 /* ThirdViewController.swift */,
+				8B2CA3752214AD1100F1FFF5 /* TableViewCell.swift */,
 				28ED871221C410BF00BA4AF5 /* FourthViewController.swift */,
-				2846BB3E21E65A180059E8E3 /* CollectionViewCell.swift */,
 				8B88C05C21F9297400FDB165 /* ChemicalDetails.swift */,
 				264B45F721FB760D007DBF5C /* persistentData.swift */,
 				8BCF6BEE21EF986D003602A9 /* ManualAdd.swift */,
@@ -296,6 +299,7 @@
 				264B45F821FB760D007DBF5C /* persistentData.swift in Sources */,
 				28ED871121C4104F00BA4AF5 /* ThirdViewController.swift in Sources */,
 				28D12E4521C2C5EA00C0E4DA /* FirstViewController.swift in Sources */,
+				8B2CA3762214AD1100F1FFF5 /* TableViewCell.swift in Sources */,
 				8B88C05D21F9297400FDB165 /* ChemicalDetails.swift in Sources */,
 				28ED871321C410BF00BA4AF5 /* FourthViewController.swift in Sources */,
 			);
