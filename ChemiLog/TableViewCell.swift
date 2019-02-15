@@ -11,6 +11,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell{
   
+    @IBOutlet weak var labDate: UILabel!
     @IBOutlet weak var labName: UILabel!
     
 }

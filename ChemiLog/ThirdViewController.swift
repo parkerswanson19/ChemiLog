@@ -11,8 +11,7 @@ import UIKit
 class ThirdViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    
-    var labList = ["Penny Lab", "Lab lab", "Corey Lab"]
+    var labList = [Lab(labDate: " ", labName: "Penny Lab", className: "4th hour", chemicalUsed: "Iron", quantity: 29, labType: true, notify: true)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +28,7 @@ extension ThirdViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "labCell", for: indexPath) as! TableViewCell
-    tableCell.labName.text = labList[indexPath.row]
+    tableCell.labName.text = labList[indexPath.row].labName
     return tableCell
     }
 }
