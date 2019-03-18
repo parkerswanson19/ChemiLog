@@ -12,11 +12,11 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var labList = [Lab]()
-    
+    var parker = true
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a null.
     }
     @IBAction func toThirdView(unwindSegue: UIStoryboardSegue){}
     
