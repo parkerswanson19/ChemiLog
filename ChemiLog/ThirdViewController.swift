@@ -18,6 +18,15 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        persistentLab.restore(fileName: "testLab")
+        if persistentLab.persistentClassName.count > 0{
+            for num in 0...persistentLab.persistentClassName.count - 1{
+                let persistentLabNew = Lab(labDate: persistentLab.persistentLabDate[num], labName: persistentLab.persistentLabName[num], className: persistentLab.persistentClassName[num], chemicalUsed: persistentLab.persistentChemicalUsed[num], quantity: persistentLab.persistentQuantity[num], labType: persistentLab.persistentLabType[num], notify: persistentLab.persistentNotify[num])
+                labList.append(persistentLabNew)
+                
+            }
+        }
+
         // Do any additional setup after loading the view, typically from a null.
     }
     @IBAction func toThirdView(unwindSegue: UIStoryboardSegue){}
@@ -33,12 +42,31 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
         senderVC.newLab.quantity = Int(senderVC.amountIn.text ?? " ") ?? 0
         senderVC.newLab.notify = senderVC.notifyIn.isOn
         labList.append(senderVC.newLab)
+        persistentLab.persistentLabName.append(senderVC.newLab.labName)
+        persistentLab.persistentClassName.append(senderVC.newLab.className)
+        persistentLab.persistentQuantity.append(senderVC.newLab.quantity)
+        persistentLab.persistentNotify.append(senderVC.newLab.notify)
+        persistentLab.persistentLabType.append(true)
+        persistentLab.persistentChemicalUsed.append("that one")
+        persistentLab.persistentLabDate.append(senderVC.newLab.labDate)
+        persistentLab.archive(fileName: "testLab")
+
         }
         tableView.reloadData()
     }
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in self.labList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            self.persistentLab.persistentLabName.remove(at: indexPath.row)
+            self.persistentLab.persistentClassName.remove(at: indexPath.row)
+            self.persistentLab.persistentQuantity.remove(at: indexPath.row)
+            self.persistentLab.persistentNotify.remove(at: indexPath.row)
+            self.persistentLab.persistentLabType.remove(at: indexPath.row)
+            self.persistentLab.persistentChemicalUsed.remove(at: indexPath.row)
+            self.persistentLab.persistentLabDate.remove(at: indexPath.row)
+            self.persistentLab.archive(fileName: "testLab")
+            
         }
         return [delete]
     }

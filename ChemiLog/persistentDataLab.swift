@@ -10,7 +10,7 @@ import os.log
 
 class persistentDataLab: Codable{
     
-    var persistentLabDate: [String]
+    var persistentLabDate: [Date]
     var persistentLabName: [String]
     var persistentClassName: [String]
     var persistentChemicalUsed: [String]
@@ -21,7 +21,7 @@ class persistentDataLab: Codable{
     
     init(){
         
-        persistentLabDate = ["2020"]
+        persistentLabDate = [Date.init()]
         persistentLabName = ["lab"]
         persistentClassName = ["class"]
         persistentChemicalUsed = ["chem"]
