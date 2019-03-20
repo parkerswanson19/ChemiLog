@@ -470,8 +470,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OKJ-xd-PYA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OKJ-xd-PYA">
                                 <rect key="frame" x="20" y="80" width="794" height="964"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="labCell" rowHeight="130" id="hjZ-wt-Zp8" customClass="TableViewCell" customModule="ChemiLog" customModuleProvider="target">
@@ -508,8 +509,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xY-oV-Fig">
-                                <rect key="frame" x="338" y="20" width="158" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Labs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xY-oV-Fig">
+                                <rect key="frame" x="338" y="20" width="67" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -525,15 +527,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88225668670000001" green="0.88240832089999999" blue="0.88224714989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="9xY-oV-Fig" firstAttribute="centerX" secondItem="b5c-Ab-1iD" secondAttribute="centerX" id="0ag-Oj-FHm"/>
-                            <constraint firstItem="9xY-oV-Fig" firstAttribute="centerX" secondItem="OKJ-xd-PYA" secondAttribute="centerX" id="5FE-TJ-bab"/>
-                            <constraint firstItem="OKJ-xd-PYA" firstAttribute="leading" secondItem="b5c-Ab-1iD" secondAttribute="leadingMargin" id="FKo-0Y-h4k"/>
-                            <constraint firstItem="9xY-oV-Fig" firstAttribute="top" secondItem="yiF-5m-6jp" secondAttribute="top" id="J8N-d7-Itj"/>
-                            <constraint firstItem="yiF-5m-6jp" firstAttribute="bottom" secondItem="OKJ-xd-PYA" secondAttribute="bottom" constant="18" id="QNr-q9-eOh"/>
-                            <constraint firstItem="9xY-oV-Fig" firstAttribute="leading" secondItem="yiF-5m-6jp" secondAttribute="leading" constant="338" id="jj2-8E-TG3"/>
-                            <constraint firstItem="OKJ-xd-PYA" firstAttribute="top" secondItem="9xY-oV-Fig" secondAttribute="bottom" constant="22" id="xQH-Gm-bcU"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yiF-5m-6jp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Labs" image="add" selectedImage="add" id="u9M-on-qTb"/>
@@ -573,7 +566,7 @@
                                 <rect key="frame" x="349" y="100" width="137" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jbz-EX-QwQ">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jbz-EX-QwQ">
                                 <rect key="frame" x="362" y="305" width="401" height="102"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="573151136.06319404">
@@ -675,7 +668,7 @@
                                 <rect key="frame" x="349" y="96" width="137" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="j8B-TD-NTJ">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="j8B-TD-NTJ">
                                 <rect key="frame" x="382" y="321" width="401" height="102"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="573151136.06319404">
