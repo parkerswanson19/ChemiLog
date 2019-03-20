@@ -18,7 +18,7 @@ class LabDetailsController: UIViewController{
     @IBOutlet weak var detailNotifyLab: UISwitch!
     
     var detailNameLab2 = ""
-    var detailLabDate2 = ""
+    var detailLabDate2 : Date = Date.init()
     var detailClassLab2 = " "
     var detailChemicalLab2 = " "
     var detailAmountUsedLab2 = 10
@@ -27,7 +27,7 @@ class LabDetailsController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         detailNameLab.text! = detailNameLab2
-        //detailLabDate = detailLabDate2
+        detailLabDate.setDate(detailLabDate2, animated: false)
         detailClassLab.text = detailClassLab2
         //detailChemicalLab = detailChemicalLab2
         detailAmountUsedLab.text! = String(detailAmountUsedLab2)

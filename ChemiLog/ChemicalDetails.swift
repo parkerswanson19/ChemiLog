@@ -20,7 +20,7 @@ class ChemicalDetailsController: UIViewController{
     @IBOutlet weak var detailLabs: UITextField!
     @IBOutlet weak var detailAmount: UITextField!
     
-    var detailName2 = ""
+    var detailName2 = " "
     var detailQuantity2 = 100
     var detailCatalog2 = ""
     var detailLastRefill2 = ""

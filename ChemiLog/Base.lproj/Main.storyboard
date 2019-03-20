@@ -21,7 +21,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IXe-Gh-ify">
                                 <rect key="frame" x="12" y="70" width="802" height="992"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.22094392123287671" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="c6T-ex-tD7">
                                     <size key="itemSize" width="260" height="238"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -474,14 +474,14 @@
                                 <rect key="frame" x="20" y="80" width="794" height="964"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="labCell" rowHeight="130" id="hjZ-wt-Zp8" customClass="TableViewCell" customModule="ChemiLog" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="labCell" rowHeight="130" id="hjZ-wt-Zp8" customClass="TableViewCell" customModule="ChemiLog" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="794" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hjZ-wt-Zp8" id="evg-0L-FHR">
                                             <rect key="frame" x="0.0" y="0.0" width="794" height="129.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lab Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfu-f8-Mxr">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Lab Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfu-f8-Mxr">
                                                     <rect key="frame" x="30" y="68" width="167" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="f8N-gU-f2P"/>
@@ -491,23 +491,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvr-nF-fwa">
-                                                    <rect key="frame" x="30" y="11" width="117" height="43"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="117" id="ySC-DW-uxp"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvr-nF-fwa">
+                                                    <rect key="frame" x="30" y="11" width="387" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="yvr-nF-fwa" firstAttribute="leading" secondItem="Tfu-f8-Mxr" secondAttribute="leading" id="BGh-Wd-K8B"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Tfu-f8-Mxr" secondAttribute="bottom" constant="19" id="Obt-h5-Ond"/>
-                                                <constraint firstItem="yvr-nF-fwa" firstAttribute="leading" secondItem="evg-0L-FHR" secondAttribute="leadingMargin" constant="10" id="SXU-M3-2oe"/>
-                                                <constraint firstItem="Tfu-f8-Mxr" firstAttribute="top" secondItem="yvr-nF-fwa" secondAttribute="bottom" constant="14" id="al8-cB-xfA"/>
-                                                <constraint firstItem="yvr-nF-fwa" firstAttribute="top" secondItem="evg-0L-FHR" secondAttribute="topMargin" constant="-9" id="p9E-EZ-uFY"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="labDate" destination="yvr-nF-fwa" id="suL-qg-mUF"/>
