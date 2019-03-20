@@ -16,5 +16,5 @@ class AddLabController: UIViewController{
     @IBOutlet weak var amountIn: UITextField!
     @IBOutlet weak var notifyIn: UISwitch!
     
-    var newLab = Lab.init(labDate: "String", labName: "T##String", className: "T##String", chemicalUsed: " ", quantity: 2, labType: true, notify: true)
+    var newLab = Lab.init(labDate: Date.init(), labName: "T##String", className: "T##String", chemicalUsed: " ", quantity: 2, labType: true, notify: true)
 }

@@ -10,7 +10,7 @@ import Foundation
 
 
 class Lab {
-    var labDate: String
+    var labDate: Date
     var labName: String
     var className: String
     var chemicalUsed: String
@@ -18,7 +18,7 @@ class Lab {
     var labType: Bool
     var notify: Bool
     
-    init(labDate: String, labName: String, className: String, chemicalUsed: String, quantity: Int, labType: Bool, notify: Bool)
+    init(labDate: Date, labName: String, className: String, chemicalUsed: String, quantity: Int, labType: Bool, notify: Bool)
     {
         self.labDate = labDate
         self.labName = labName
