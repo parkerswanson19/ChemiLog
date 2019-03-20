@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		264B45F821FB760D007DBF5C /* persistentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264B45F721FB760D007DBF5C /* persistentData.swift */; };
+		2676F01D224272B000F27DA2 /* persistentDataLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2676F01C224272B000F27DA2 /* persistentDataLab.swift */; };
 		268C02092215D1A000F44B4E /* Lab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C02082215D1A000F44B4E /* Lab.swift */; };
 		26D8E37821C418D20046ED90 /* Chemical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D8E37721C418D20046ED90 /* Chemical.swift */; };
 		26D8E37A21C809740046ED90 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D8E37921C809740046ED90 /* Inventory.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		264B45F721FB760D007DBF5C /* persistentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persistentData.swift; sourceTree = "<group>"; };
+		2676F01C224272B000F27DA2 /* persistentDataLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persistentDataLab.swift; sourceTree = "<group>"; };
 		268C02082215D1A000F44B4E /* Lab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab.swift; sourceTree = "<group>"; };
 		26D8E37721C418D20046ED90 /* Chemical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chemical.swift; sourceTree = "<group>"; };
 		26D8E37921C809740046ED90 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				8B88C05C21F9297400FDB165 /* ChemicalDetails.swift */,
 				8B37B8722239598500EA0FA5 /* LabDetails.swift */,
 				264B45F721FB760D007DBF5C /* persistentData.swift */,
+				2676F01C224272B000F27DA2 /* persistentDataLab.swift */,
 				8BCF6BEE21EF986D003602A9 /* ManualAdd.swift */,
 				8B8AFF5222299725006EB5D6 /* addLab.swift */,
 				28D12E4821C2C5EA00C0E4DA /* Main.storyboard */,
@@ -311,6 +314,7 @@
 				264B45F821FB760D007DBF5C /* persistentData.swift in Sources */,
 				28ED871121C4104F00BA4AF5 /* ThirdViewController.swift in Sources */,
 				28D12E4521C2C5EA00C0E4DA /* FirstViewController.swift in Sources */,
+				2676F01D224272B000F27DA2 /* persistentDataLab.swift in Sources */,
 				8B2CA3762214AD1100F1FFF5 /* TableViewCell.swift in Sources */,
 				8B88C05D21F9297400FDB165 /* ChemicalDetails.swift in Sources */,
 				28ED871321C410BF00BA4AF5 /* FourthViewController.swift in Sources */,
