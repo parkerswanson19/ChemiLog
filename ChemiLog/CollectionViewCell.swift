@@ -19,8 +19,11 @@ class CollectionViewCell: UICollectionViewCell{
     
     @IBOutlet weak var chemicalName: UILabel!
     
-    @IBAction func deleteChemical(_ sender: Any) {
+    @IBAction func deleteChemical(_ sender: Any){
+        NotificationCenter.default.post(name: Notification.Name("alert"), object: nil)
+    
         delegate?.delete(cell: self)
     }
     
 }
+

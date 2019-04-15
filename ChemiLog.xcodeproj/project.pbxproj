@@ -26,6 +26,7 @@
 		8B2CA37422132AD900F1FFF5 /* Screen Shot 2019-01-23 at 4.44.03 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2CA37322132AD900F1FFF5 /* Screen Shot 2019-01-23 at 4.44.03 PM.png */; };
 		8B2CA3762214AD1100F1FFF5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2CA3752214AD1100F1FFF5 /* TableViewCell.swift */; };
 		8B37B8732239598500EA0FA5 /* LabDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37B8722239598500EA0FA5 /* LabDetails.swift */; };
+		8B5924FF2256ED480059B328 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5924FE2256ED480059B328 /* AlertController.swift */; };
 		8B88C05D21F9297400FDB165 /* ChemicalDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B88C05C21F9297400FDB165 /* ChemicalDetails.swift */; };
 		8B8AFF5322299725006EB5D6 /* addLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8AFF5222299725006EB5D6 /* addLab.swift */; };
 		8BCF6BEF21EF986D003602A9 /* ManualAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCF6BEE21EF986D003602A9 /* ManualAdd.swift */; };
@@ -74,6 +75,7 @@
 		8B2CA37322132AD900F1FFF5 /* Screen Shot 2019-01-23 at 4.44.03 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2019-01-23 at 4.44.03 PM.png"; sourceTree = "<group>"; };
 		8B2CA3752214AD1100F1FFF5 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8B37B8722239598500EA0FA5 /* LabDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabDetails.swift; sourceTree = "<group>"; };
+		8B5924FE2256ED480059B328 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		8B88C05C21F9297400FDB165 /* ChemicalDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemicalDetails.swift; sourceTree = "<group>"; };
 		8B8AFF5222299725006EB5D6 /* addLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addLab.swift; sourceTree = "<group>"; };
 		8BCF6BEE21EF986D003602A9 /* ManualAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAdd.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				2676F01C224272B000F27DA2 /* persistentDataLab.swift */,
 				8BCF6BEE21EF986D003602A9 /* ManualAdd.swift */,
 				8B8AFF5222299725006EB5D6 /* addLab.swift */,
+				8B5924FE2256ED480059B328 /* AlertController.swift */,
 				28D12E4821C2C5EA00C0E4DA /* Main.storyboard */,
 				28D12E4B21C2C5EB00C0E4DA /* Assets.xcassets */,
 				28D12E4D21C2C5EB00C0E4DA /* LaunchScreen.storyboard */,
@@ -310,6 +313,7 @@
 				8B37B8732239598500EA0FA5 /* LabDetails.swift in Sources */,
 				26D8E37A21C809740046ED90 /* Inventory.swift in Sources */,
 				8BCF6BEF21EF986D003602A9 /* ManualAdd.swift in Sources */,
+				8B5924FF2256ED480059B328 /* AlertController.swift in Sources */,
 				28D12E4321C2C5EA00C0E4DA /* AppDelegate.swift in Sources */,
 				264B45F821FB760D007DBF5C /* persistentData.swift in Sources */,
 				28ED871121C4104F00BA4AF5 /* ThirdViewController.swift in Sources */,

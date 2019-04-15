@@ -77,7 +77,13 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "labCell", for: indexPath) as! TableViewCell
     tableCell.labName.text = labList[indexPath.row].labName
-        tableCell.labDate.text = labList[indexPath.row].labDate.description
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, MMM d, yyyy"
+        let input = labList[indexPath.row].labDate.description
+        if let date2 = formatter.date(from: input){
+            print(input)
+            tableCell.labDate.text = date2.description
+        }
         tableCell.tag = indexPath.row
         return tableCell
     }

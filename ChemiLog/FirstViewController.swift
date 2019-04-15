@@ -37,7 +37,21 @@ class FirstViewController: UIViewController {
         
         
         // Do any additional setup after loading the view, typically from a nib.
+        NotificationCenter.default.addObserver(self, selector: #selector(alertShown), name: Notification.Name("alert"), object: nil)
     }
+    @objc func alertShown() {
+        let alert = UIAlertController(title: "Are you sure you want to delete this Chemical?", message: "You will not be able to recover it if yes.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+            
+        }) )
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.destructive, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+            
+            
+        }))
+        self.present(alert, animated: true)
+    }
+        
+    
     //Segue that activates when the plus button is tapped
     @IBAction func toAddChem(_ sender: Any) {
         performSegue(withIdentifier: "toManualAdd", sender: self)
