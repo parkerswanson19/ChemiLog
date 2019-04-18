@@ -21,8 +21,14 @@ class CollectionViewCell: UICollectionViewCell{
     
     @IBAction func deleteChemical(_ sender: Any){
         NotificationCenter.default.post(name: Notification.Name("alert"), object: nil)
-    
+        let parentView = self.superview
+        parentView?.tag = self.tag
+        print("\(self.tag)")
+    }
+    public func deleteCellPerm()
+    {
         delegate?.delete(cell: self)
+        
     }
     
 }

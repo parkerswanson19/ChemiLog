@@ -42,12 +42,16 @@ class FirstViewController: UIViewController {
     @objc func alertShown() {
         let alert = UIAlertController(title: "Are you sure you want to delete this Chemical?", message: "You will not be able to recover it if yes.", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
-            
+            let tempCell = self.collectionView.visibleCells[self.view.tag] as? CollectionViewCell
+            tempCell?.deleteCellPerm()
+            self.collectionView.reloadData()
+            print("yes")
         }) )
         alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.destructive, handler: { (action) in alert.dismiss(animated: true, completion: nil)
             
             
         }))
+
         self.present(alert, animated: true)
     }
         
@@ -161,6 +165,7 @@ extension FirstViewController: CellDelegate{
             persistentChemical.savedAmount.remove(at: indexPath.row)
             persistentChemical.archive(fileName: "test1")
             collectionView?.deleteItems(at: [indexPath])
+            print("Deleted cell at \(indexPath.row)")
 
         }
     }
