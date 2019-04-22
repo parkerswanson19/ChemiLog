@@ -17,6 +17,9 @@ class FirstViewController: UIViewController {
     
     //Main Array of all Chemicals
     var chemicalList = [Chemical]()
+    func sortChems(){
+        //chemicalList = chemicalList.sorted(by: {$0 < $1})
+    }
 
      @IBOutlet weak var collectionView: UICollectionView!
     
@@ -130,6 +133,7 @@ extension FirstViewController: UICollectionViewDataSource, UICollectionViewDeleg
         }
         return cell
     }
+    
    
     //Function that prepares data for when a chemical is clicked on
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
