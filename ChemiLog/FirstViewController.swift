@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+var deleteRow = true
 
 class FirstViewController: UIViewController {
     
@@ -20,6 +20,8 @@ class FirstViewController: UIViewController {
     func sortChems(){
         //chemicalList = chemicalList.sorted(by: {$0 < $1})
     }
+    
+    var toDeleteIndex = -1;
 
      @IBOutlet weak var collectionView: UICollectionView!
     
@@ -44,13 +46,13 @@ class FirstViewController: UIViewController {
     }
     @objc func alertShown() {
         let alert = UIAlertController(title: "Are you sure you want to delete this Chemical?", message: "You will not be able to recover it if yes.", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
-            let tempCell = self.collectionView.visibleCells[self.view.tag] as? CollectionViewCell
-            tempCell?.deleteCellPerm()
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+            deleteRow = true
+            print(self.toDeleteIndex)
+            self.deleteData(indx: self.toDeleteIndex,cell: self.collectionView.visibleCells[self.toDeleteIndex])
             self.collectionView.reloadData()
-            print("yes")
         }) )
-        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.destructive, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
             
             
         }))
@@ -123,6 +125,8 @@ extension FirstViewController: UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         cell.chemicalName.text = chemicalList[indexPath.row].name
+        cell.index = indexPath
+        cell.parentView = self
         cell.tag = indexPath.row
         cell.delegate = self
         if deleteButtonExist {
@@ -139,6 +143,7 @@ extension FirstViewController: UICollectionViewDataSource, UICollectionViewDeleg
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dvc = segue.destination as? ChemicalDetailsController{
             if let cell = sender as? CollectionViewCell {
+                print("Loading Cell \(cell.tag)")
                 dvc.detailName2 = chemicalList[cell.tag].name
                 dvc.detailQuantity2 = chemicalList[cell.tag].quantity
                 dvc.detailCatalog2 = chemicalList[cell.tag].catalogNumber
@@ -152,25 +157,25 @@ extension FirstViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
 }
 
-extension FirstViewController: CellDelegate{
+extension FirstViewController: dataCollectionProtocol{
     
     //Delete Function
-    func delete(cell: CollectionViewCell) {
-        if let indexPath = collectionView?.indexPath(for: cell){
-            chemicalList.remove(at: indexPath.row)
-            persistentChemical.savedName.remove(at: indexPath.row)
-            persistentChemical.savedQuantity.remove(at: indexPath.row)
-            persistentChemical.savedCatalogNumber.remove(at: indexPath.row)
-            persistentChemical.savedLastRefill.remove(at: indexPath.row)
-            persistentChemical.savedNextRefill.remove(at: indexPath.row)
-            persistentChemical.savedCatalogLink.remove(at: indexPath.row)
-            persistentChemical.savedIcon.remove(at: indexPath.row)
-            persistentChemical.savedUsedLabs.remove(at: indexPath.row)
-            persistentChemical.savedAmount.remove(at: indexPath.row)
+    func deleteData(indx: Int, cell: UICollectionViewCell) {
+        if deleteRow == true{
+            chemicalList.remove(at: indx)
+            persistentChemical.savedName.remove(at: indx)
+            persistentChemical.savedQuantity.remove(at: indx)
+            persistentChemical.savedCatalogNumber.remove(at: indx)
+            persistentChemical.savedLastRefill.remove(at: indx)
+            persistentChemical.savedNextRefill.remove(at: indx)
+            persistentChemical.savedCatalogLink.remove(at: indx)
+            persistentChemical.savedIcon.remove(at: indx)
+            persistentChemical.savedUsedLabs.remove(at: indx)
+            persistentChemical.savedAmount.remove(at: indx)
             persistentChemical.archive(fileName: "test1")
-            collectionView?.deleteItems(at: [indexPath])
-            print("Deleted cell at \(indexPath.row)")
-
+            collectionView.deleteItems(at: [collectionView.indexPath(for: cell)!])
+            print("Deleted cell at \(indx)")
+            collectionView.reloadItems(at: collectionView.indexPathsForVisibleItems)
         }
     }
     
