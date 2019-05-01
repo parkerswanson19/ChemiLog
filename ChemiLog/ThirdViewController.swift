@@ -66,7 +66,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.persistentLab.persistentChemicalUsed.remove(at: indexPath.row)
             self.persistentLab.persistentLabDate.remove(at: indexPath.row)
             self.persistentLab.archive(fileName: "testLab")
-            
+            tableView.reloadData()
         }
         return [delete]
     }

@@ -24,12 +24,17 @@ class LabDetailsController: UIViewController{
     var detailAmountUsedLab2 = 10
     var detailNotifyLab2 = true
     
+    var pickerData: [Chemical] = [Chemical]()
     override func viewDidLoad() {
         super.viewDidLoad()
         detailNameLab.text! = detailNameLab2
         detailLabDate.setDate(detailLabDate2, animated: false)
         detailClassLab.text = detailClassLab2
         //detailChemicalLab = detailChemicalLab2
+        self.detailChemicalLab.delegate = (self as! UIPickerViewDelegate)
+        self.detailChemicalLab.dataSource = (self as! UIPickerViewDataSource)
+        
+        
         detailAmountUsedLab.text! = String(detailAmountUsedLab2)
         detailNotifyLab.isOn = detailNotifyLab2
     }

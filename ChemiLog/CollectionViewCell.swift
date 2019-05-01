@@ -8,11 +8,15 @@
 
 import Foundation
 import UIKit
-protocol CellDelegate: class{
-    func delete(cell: CollectionViewCell)
+var classDeleteAttempt = false
+
+protocol dataCollectionProtocol: class{
+    func deleteData(indx: Int, cell: UICollectionViewCell)
 }
 class CollectionViewCell: UICollectionViewCell{
-    weak var delegate: CellDelegate?
+    var delegate: dataCollectionProtocol?
+    var index: IndexPath?
+    var parentView: FirstViewController?
     @IBOutlet weak var deleteButton: UIButton!
     
     @IBOutlet weak var deleteButtonBackgroundView: UIVisualEffectView!
@@ -20,15 +24,10 @@ class CollectionViewCell: UICollectionViewCell{
     @IBOutlet weak var chemicalName: UILabel!
     
     @IBAction func deleteChemical(_ sender: Any){
+        classDeleteAttempt = true
         NotificationCenter.default.post(name: Notification.Name("alert"), object: nil)
-        let parentView = self.superview
-        parentView?.tag = self.tag
-        print("\(self.tag)")
-    }
-    public func deleteCellPerm()
-    {
-        delegate?.delete(cell: self)
-        
+        print(index?.row)
+        parentView?.toDeleteIndex = index?.row ?? -1
     }
     
 }
