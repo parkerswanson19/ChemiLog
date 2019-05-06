@@ -30,7 +30,6 @@ class LabDetailsController: UIViewController, UIPickerViewDelegate, UIPickerView
     var selectedChem = 0
     var place = 0
     
-    var pickerData: [Chemical] = [Chemical]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.detailChemicalLab.delegate = self
