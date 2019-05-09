@@ -424,7 +424,7 @@
                                 <state key="normal" title="Button" image="flask"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy7-DY-blH">
-                                <rect key="frame" x="483" y="133" width="125" height="117"/>
+                                <rect key="frame" x="484" y="133" width="125" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="potion"/>
                             </button>
