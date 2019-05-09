@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -428,8 +428,24 @@
                                     <segue destination="BLP-Cb-e3q" kind="unwind" unwindAction="toSubmitNewChem:" id="dVO-pC-8WE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCn-k2-eK3">
+                                <rect key="frame" x="33" y="857" width="129" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="Hen-k0-o7l"/>
+                                    <constraint firstAttribute="height" constant="75" id="R2j-Lr-T5r"/>
+                                </constraints>
+                                <state key="normal" title="Picture"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U9W-Ok-Dbp">
+                                <rect key="frame" x="0.0" y="635" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wrv-Fg-9Si" firstAttribute="bottom" secondItem="GCn-k2-eK3" secondAttribute="bottom" constant="92" id="XVC-Z5-8Uw"/>
+                            <constraint firstItem="GCn-k2-eK3" firstAttribute="leading" secondItem="wrv-Fg-9Si" secondAttribute="leading" constant="33" id="f7i-RM-p0q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wrv-Fg-9Si"/>
                     </view>
                     <connections>
@@ -445,7 +461,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPp-Ms-70h" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BLP-Cb-e3q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1629.4964028776978" y="-153.77697841726618"/>
+            <point key="canvasLocation" x="1628.90625" y="-154.1015625"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
