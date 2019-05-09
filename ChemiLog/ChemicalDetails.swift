@@ -47,6 +47,7 @@ class ChemicalDetailsController: UIViewController{
         detailLabs.text! = detailLabs2
         detailAmount.text! = String(detailAmount2)
         
+        
     }
     
 }
