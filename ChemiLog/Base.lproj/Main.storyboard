@@ -131,6 +131,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                        <connections>
+                                            <action selector="tapQuantity:" destination="r4d-aj-9VN" eventType="primaryActionTriggered" id="1rR-59-aKS"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ZR-Wu-q0w">
                                         <rect key="frame" x="524" y="480" width="156" height="48"/>
@@ -139,6 +142,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="tapCatalog:" destination="r4d-aj-9VN" eventType="primaryActionTriggered" id="wyb-gA-YxR"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9A-2K-MBD">
                                         <rect key="frame" x="524" y="568" width="156" height="48"/>
@@ -147,6 +153,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                        <connections>
+                                            <action selector="tapLastRefill:" destination="r4d-aj-9VN" eventType="primaryActionTriggered" id="bQ9-Ny-Uiv"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GP1-X1-ywt">
                                         <rect key="frame" x="524" y="659" width="156" height="48"/>
@@ -155,6 +164,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                        <connections>
+                                            <action selector="tapNextRefill:" destination="r4d-aj-9VN" eventType="primaryActionTriggered" id="gUs-qC-biA"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SK6-zD-gEF">
                                         <rect key="frame" x="524" y="744" width="156" height="48"/>
@@ -163,6 +175,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                        <connections>
+                                            <action selector="tapLab:" destination="r4d-aj-9VN" eventType="editingDidEnd" id="y7d-5z-43R"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="doj-Ep-Qh0">
                                         <rect key="frame" x="524" y="835" width="156" height="48"/>
@@ -171,6 +186,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                        <connections>
+                                            <action selector="tapAmount:" destination="r4d-aj-9VN" eventType="primaryActionTriggered" id="bIo-vP-hHr"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgB-DQ-RFg">
                                         <rect key="frame" x="200" y="395" width="188" height="49"/>
@@ -230,6 +248,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="tapName:" destination="r4d-aj-9VN" eventType="primaryActionTriggered" id="riK-Mn-Fbj"/>
+                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="link" translatesAutoresizingMaskIntoConstraints="NO" id="Bnx-Vw-IY6">
                                         <rect key="frame" x="702" y="317" width="29" height="28"/>
