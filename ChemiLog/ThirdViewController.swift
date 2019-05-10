@@ -9,15 +9,18 @@
 import UIKit
 
 class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+
     @IBOutlet weak var tableView: UITableView!
     
     var labList = [Lab]()
     var persistentLab = persistentDataLab()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        
         persistentLab.restore(fileName: "testLab")
         if persistentLab.persistentClassName.count > 0{
             for num in 0...persistentLab.persistentClassName.count - 1{
@@ -26,6 +29,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
                 
             }
         }
+
 
         // Do any additional setup after loading the view, typically from a null.
     }
@@ -38,7 +42,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
         senderVC.dateIn.calendar = Calendar.current
         senderVC.newLab.labDate = senderVC.dateIn.date
         senderVC.newLab.className = senderVC.classIn.text ?? ""
-        //senderVC.newLab.chemicalUsed = senderVC.chemicalIn
+        senderVC.newLab.chemicalUsed = pickerData[senderVC.chemicalIn.selectedRow(inComponent: 0)]
         senderVC.newLab.quantity = Int(senderVC.amountIn.text ?? " ") ?? 0
         senderVC.newLab.notify = senderVC.notifyIn.isOn
         labList.append(senderVC.newLab)
@@ -67,9 +71,11 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.persistentLab.persistentLabDate.remove(at: indexPath.row)
             self.persistentLab.archive(fileName: "testLab")
             tableView.reloadData()
+
         }
         return [delete]
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return labList.count
     }
@@ -100,6 +106,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
                 dvc.detailChemicalLab2 = labList[tableCell.tag].chemicalUsed
                 dvc.detailAmountUsedLab2 = labList[tableCell.tag].quantity
                 dvc.detailNotifyLab2 = labList[tableCell.tag].notify
+                print(dvc.detailChemicalLab2)
             }
         }
     }

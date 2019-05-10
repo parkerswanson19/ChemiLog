@@ -34,10 +34,16 @@ class Chemical{
         var url1: String
         var url2: String
         var url3: String
-        url1 = "https://www.flinnsci.com/" + "\(amount)" + "-"
-        url2 = name + "-" + "\(quantity)"
-        url3 = "-ml/" + catalogNumber + "/"
-        let url = url1 + url2 + url3
+        var placeQuantity: Int
+        if quantity != 100 || quantity != 200{
+            placeQuantity = 100
+        } else {
+            placeQuantity = quantity
+        }
+        url1 = "https://www.flinnsci.com/products/chemicals/" //+ "\(amount)" + "-"
+        //url2 = name + "-" + "\(placeQuantity)"
+        //url3 = "-ml/" + catalogNumber + "/"
+        let url = url1 //+ url2 + url3
         //let url = "https://www.flinnsci.com/1-bromobutane-100-ml/b0238/"
         self.catalogLink = url
         
