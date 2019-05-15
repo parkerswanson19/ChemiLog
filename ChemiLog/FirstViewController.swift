@@ -8,6 +8,7 @@
 
 import UIKit
 var deleteRow = true
+var chemicalList = [Chemical]()
 
 class FirstViewController: UIViewController {
     
@@ -16,7 +17,6 @@ class FirstViewController: UIViewController {
     var persistentChemical = persistentData()
     
     //Main Array of all Chemicals
-    var chemicalList = [Chemical]()
     func sortChems(){
         //chemicalList = chemicalList.sorted(by: {$0 < $1})
     }
@@ -78,7 +78,8 @@ class FirstViewController: UIViewController {
     }
     
     //Brings back to first view when backbutton is tapped
-    @IBAction func toFirstView(unwindSegue: UIStoryboardSegue){}
+    @IBAction func toFirstView(unwindSegue: UIStoryboardSegue){
+    }
     
     //Segue that submits a chemical along with all entered data
     @IBAction func toSubmitNewChem(_ sender: UIStoryboardSegue)
@@ -110,6 +111,7 @@ class FirstViewController: UIViewController {
     }
     //NOT WORKING Function that allows you to resumbmit the name
     @IBAction func toEditExistingChem(_ sender: UIStoryboardSegue){
+        collectionView.reloadData()
             
         }
 }
@@ -144,6 +146,7 @@ extension FirstViewController: UICollectionViewDataSource, UICollectionViewDeleg
         if let dvc = segue.destination as? ChemicalDetailsController{
             if let cell = sender as? CollectionViewCell {
                 print("Loading Cell \(cell.tag)")
+                dvc.id = cell.tag
                 dvc.detailName2 = chemicalList[cell.tag].name
                 dvc.detailQuantity2 = chemicalList[cell.tag].quantity
                 dvc.detailCatalog2 = chemicalList[cell.tag].catalogNumber

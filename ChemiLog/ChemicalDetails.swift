@@ -20,6 +20,7 @@ class ChemicalDetailsController: UIViewController{
     @IBOutlet weak var detailLabs: UITextField!
     @IBOutlet weak var detailAmount: UITextField!
     
+    var id = 0
     var detailName2 = " "
     var detailQuantity2 = 100
     var detailCatalog2 = ""
@@ -28,16 +29,42 @@ class ChemicalDetailsController: UIViewController{
     var detailLabs2 = " "
     var detailAmount2 = 1
     var detailCatalogLink2 = URL(string: "blah")
+    var persistentNewChemical = persistentData()
+    var chemiList = [Chemical]()
     
     @IBAction func flinnCatalog(_ sender: Any) {
         let linky = detailCatalogLink2
         print(linky ?? 0)
         UIApplication.shared.open(linky!)
     }
-    //chemicalList.remove(at: indexPath.row)
+    @IBAction func ReSubmitChemical(_ sender: Any) {
+        chemicalList[id].name = detailName.text ?? "no work"
+         chemicalList[id].quantity = Int(detailQuantity.text ?? "no") ?? 0
+         chemicalList[id].catalogNumber = detailCatalog.text ?? "no"
+         chemicalList[id].lastRefill = detailLastRefill.text ?? "no"
+         chemicalList[id].nextRefill = detailNextRefill.text ?? "no"
+         chemicalList[id].usedLabs = detailLabs.text ?? "no"
+         chemicalList[id].amount = Int(detailAmount.text ?? "no") ?? 0
+        persistentNewChemical.savedName[id] = chemicalList[id].name
+        persistentNewChemical.savedQuantity[id] = chemicalList[id].quantity
+        persistentNewChemical.savedCatalogNumber[id] = chemicalList[id].catalogNumber
+        persistentNewChemical.savedLastRefill[id] = chemicalList[id].lastRefill
+        persistentNewChemical.savedNextRefill[id] = chemicalList[id].nextRefill
+        persistentNewChemical.savedUsedLabs[id] = chemicalList[id].usedLabs
+        persistentNewChemical.savedAmount[id] = chemicalList[id].amount
+        persistentNewChemical.archive(fileName: "test1")
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        persistentNewChemical.restore(fileName: "test1")
+        if persistentNewChemical.savedName.count > 0{
+            for num in 0...persistentNewChemical.savedName.count - 1{
+                let persistentChemicalNew = Chemical(quantity: persistentNewChemical.savedQuantity[num], name: persistentNewChemical.savedName[num], catalogNumber: persistentNewChemical.savedCatalogNumber[num], lastRefill: persistentNewChemical.savedLastRefill[num], nextRefill: persistentNewChemical.savedNextRefill[num], usedLabs: persistentNewChemical.savedUsedLabs[num], icon: persistentNewChemical.savedIcon[num], amount: persistentNewChemical.savedAmount[num])
+                chemiList.append(persistentChemicalNew)
+            }
+        }
         print(detailName2)
         detailName.text! = detailName2
         detailQuantity.text! = String(detailQuantity2)

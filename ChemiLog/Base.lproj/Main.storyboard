@@ -262,6 +262,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                         <state key="normal" title="Re-Submit"/>
                                         <connections>
+                                            <action selector="ReSubmitChemical:" destination="r4d-aj-9VN" eventType="touchUpInside" id="3Yb-9g-aM8"/>
                                             <segue destination="2rt-EY-C1j" kind="unwind" unwindAction="toEditExistingChem:" id="YMl-dd-tBj"/>
                                         </connections>
                                     </button>
@@ -642,6 +643,9 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="detailClassResign:" destination="reN-BL-Yvc" eventType="primaryActionTriggered" id="2mc-DM-k0B"/>
+                                </connections>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xPk-la-HXF">
                                 <rect key="frame" x="362" y="900" width="49" height="31"/>
@@ -654,6 +658,9 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <connections>
+                                    <action selector="detailAmountResign:" destination="reN-BL-Yvc" eventType="primaryActionTriggered" id="PVc-Fx-FRM"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount Used:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOR-TI-Zk2">
                                 <rect key="frame" x="97" y="781" width="225" height="35"/>
@@ -668,6 +675,9 @@
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="detailNameResign:" destination="reN-BL-Yvc" eventType="primaryActionTriggered" id="9b5-nb-sSq"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -701,6 +711,9 @@
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameInResign:" destination="wZ7-B6-mdg" eventType="primaryActionTriggered" id="vdP-mi-Of5"/>
+                                </connections>
                             </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="j8B-TD-NTJ">
                                 <rect key="frame" x="382" y="321" width="335" height="102"/>
@@ -754,6 +767,10 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="classInResign:" destination="wZ7-B6-mdg" eventType="primaryActionTriggered" id="SKE-e5-OXP"/>
+                                    <action selector="detailClassResign:" destination="PCp-up-LqI" eventType="primaryActionTriggered" id="gch-4J-Nbk"/>
+                                </connections>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YQ3-KA-SbG">
                                 <rect key="frame" x="370" y="875" width="49" height="31"/>
@@ -766,6 +783,9 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <connections>
+                                    <action selector="amountInResign:" destination="wZ7-B6-mdg" eventType="primaryActionTriggered" id="xCQ-Uq-3VH"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFX-Ro-O5R">
                                 <rect key="frame" x="17" y="27" width="50" height="50"/>
