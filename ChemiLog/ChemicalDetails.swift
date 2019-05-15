@@ -20,6 +20,7 @@ class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var detailPickerss: UIPickerView!    
     @IBOutlet weak var detailAmount: UITextField!
     
+    
     var persistentLabs = persistentDataLab()
     var detailName2 = " "
     var detailQuantity2 = 100
