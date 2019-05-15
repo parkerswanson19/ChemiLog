@@ -9,6 +9,8 @@
 import UIKit
 
 class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+
+    
     
     var activeTextField: UITextField!
    
@@ -17,7 +19,8 @@ class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var detailCatalog: UITextField!
     @IBOutlet weak var detailLastRefill: UITextField!
     @IBOutlet weak var detailNextRefill: UITextField!
-    @IBOutlet weak var detailPickerss: UIPickerView!    
+
+    @IBOutlet weak var detailPickerss: UIPickerView!
     @IBOutlet weak var detailAmount: UITextField!
     
     
@@ -34,7 +37,6 @@ class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPicke
     var pickerDataLabs2: [String] = [String]()
     var selectedLab = 0
     var place = 0
-
     var persistentNewChemical = persistentData()
     var chemiList = [Chemical]()
     
@@ -49,7 +51,7 @@ class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPicke
          chemicalList[id].catalogNumber = detailCatalog.text ?? "no"
          chemicalList[id].lastRefill = detailLastRefill.text ?? "no"
          chemicalList[id].nextRefill = detailNextRefill.text ?? "no"
-         chemicalList[id].usedLabs = detailLabs.text ?? "no"
+         chemicalList[id].usedLabs = detailPickerss.description
          chemicalList[id].amount = Int(detailAmount.text ?? "no") ?? 0
         persistentNewChemical.savedName[id] = chemicalList[id].name
         persistentNewChemical.savedQuantity[id] = chemicalList[id].quantity
@@ -88,6 +90,7 @@ class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPicke
                 chemiList.append(persistentChemicalNew)
             }
         }
+
         print(detailName2)
         detailName.text! = detailName2
         detailQuantity.text! = String(detailQuantity2)
@@ -99,22 +102,7 @@ class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPicke
 
         
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerDataLabs2.count
-    }
-    
-    // The data to return for the row and component (column) that's being passed in
-    private func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return pickerDataLabs2[row]
-    }
+
         let center: NotificationCenter = NotificationCenter.default;
         center.addObserver(self, selector: #selector(keyboardDidShow(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
         center.addObserver(self, selector: #selector(keyboardWillHide(notification: )), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -126,8 +114,6 @@ class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPicke
         detailLastRefill.returnKeyType = .done
         detailNextRefill.addTarget(self, action: #selector(textFieldClicked(_:)), for: .touchDown)
         detailNextRefill.returnKeyType = .done
-        detailLabs.addTarget(self, action: #selector(textFieldClicked(_:)), for: .touchDown)
-        detailLabs.returnKeyType = .done
         detailAmount.addTarget(self, action: #selector(textFieldClicked(_:)), for: .touchDown)
         detailAmount.returnKeyType = .done
         detailQuantity.addTarget(self, action: #selector(textFieldClicked(_:)), for: .touchDown)
@@ -148,6 +134,23 @@ class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPicke
             }
             
         }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerDataLabs2.count
+    }
+    
+    // The data to return for the row and component (column) that's being passed in
+    private func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return pickerDataLabs2[row]
     }
     
     @objc func keyboardWillHide(notification: Notification){
@@ -182,7 +185,7 @@ class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPicke
         detailNextRefill.resignFirstResponder()
     }
     @IBAction func tapLab(_ sender: Any) {
-        detailLabs.resignFirstResponder()
+        detailPickerss.resignFirstResponder()
     }
     @IBAction func tapAmount(_ sender: Any) {
         detailAmount.resignFirstResponder()

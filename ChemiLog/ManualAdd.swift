@@ -15,7 +15,7 @@ class ManualAddController: UIViewController, UITextFieldDelegate, UIPickerViewDe
     @IBOutlet weak var catalogIn: UITextField!
     @IBOutlet weak var quantityIn: UITextField!
     @IBOutlet weak var lastRefillIn: UITextField!
-    @IBOutlet weak var nextUseIn: UITextField!
+    @IBOutlet weak var nextUseIn: UITextField!    
     @IBOutlet weak var labPicker: UIPickerView!
     @IBOutlet weak var amountIn: UITextField!
     
