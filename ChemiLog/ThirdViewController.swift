@@ -8,11 +8,11 @@
 
 import UIKit
 
+var labList = [Lab]()
 class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     @IBOutlet weak var tableView: UITableView!
     
-    var labList = [Lab]()
     var persistentLab = persistentDataLab()
 
     
@@ -59,7 +59,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.reloadData()
     }
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in self.labList.remove(at: indexPath.row)
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in labList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             self.persistentLab.persistentLabName.remove(at: indexPath.row)
