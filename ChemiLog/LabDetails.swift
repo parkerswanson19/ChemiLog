@@ -29,6 +29,7 @@ class LabDetailsController: UIViewController, UIPickerViewDelegate, UIPickerView
     var pickerData: [String] = [String]()
     var selectedChem = 0
     var place = 0
+    var currDate = Date.init(timeIntervalSinceNow: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,9 @@ class LabDetailsController: UIViewController, UIPickerViewDelegate, UIPickerView
             print(detailChemicalLab2)
         }
         
+        
+
+        
         for name in pickerData{
             
             if name == detailChemicalLab2.description {
@@ -60,6 +64,7 @@ class LabDetailsController: UIViewController, UIPickerViewDelegate, UIPickerView
         detailChemicalLab.selectRow(selectedChem, inComponent: 0, animated: true)
         detailAmountUsedLab.text! = String(detailAmountUsedLab2)
         detailNotifyLab.isOn = detailNotifyLab2
+        
 
     }
     override func didReceiveMemoryWarning() {

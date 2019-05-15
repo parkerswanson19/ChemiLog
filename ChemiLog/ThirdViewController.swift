@@ -14,6 +14,11 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var labList = [Lab]()
     var persistentLab = persistentDataLab()
+    var currDate = Date.init(timeIntervalSinceNow: 0)
+    var place = 0
+    var place2 = 0
+    var persistentChemical4 = persistentData()
+    var chemList = [Chemical]()
 
     
     override func viewDidLoad() {
@@ -26,10 +31,42 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
             for num in 0...persistentLab.persistentClassName.count - 1{
                 let persistentLabNew = Lab(labDate: persistentLab.persistentLabDate[num], labName: persistentLab.persistentLabName[num], className: persistentLab.persistentClassName[num], chemicalUsed: persistentLab.persistentChemicalUsed[num], quantity: persistentLab.persistentQuantity[num], labType: persistentLab.persistentLabType[num], notify: persistentLab.persistentNotify[num])
                 labList.append(persistentLabNew)
-                
             }
         }
-
+        persistentChemical4.restore(fileName: "test1")
+        if persistentChemical4.savedName.count > 0{
+            for num in 0...persistentChemical4.savedName.count - 1{
+                let persistentChemicalNew = Chemical(quantity: persistentChemical4.savedQuantity[num], name: persistentChemical4.savedName[num], catalogNumber: persistentChemical4.savedCatalogNumber[num], lastRefill: persistentChemical4.savedLastRefill[num], nextRefill: persistentChemical4.savedNextRefill[num], usedLabs: persistentChemical4.savedUsedLabs[num], icon: persistentChemical4.savedIcon[num], amount: persistentChemical4.savedAmount[num])
+                chemList.append(persistentChemicalNew)
+            }
+        }
+        
+        for lab in labList{
+            if lab.labDate < currDate{
+                //for chem in chemList{
+                    //if chem.name == persistentLab.persistentChemicalUsed[place]{
+                        //self.persistentChemical4.savedQuantity[place2] = self.persistentChemical4.savedQuantity[place2] - self.persistentLab.persistentQuantity[place]
+                        //self.persistentChemical4.archive(fileName: "test1")
+                    //}
+                    //place2 = place2 + 1
+                //}
+                place2 = 0
+                self.persistentLab.persistentLabName.remove(at: place)
+                self.persistentLab.persistentClassName.remove(at: place)
+                self.persistentLab.persistentQuantity.remove(at: place)
+                self.persistentLab.persistentNotify.remove(at: place)
+                self.persistentLab.persistentLabType.remove(at: place)
+                self.persistentLab.persistentChemicalUsed.remove(at: place)
+                self.persistentLab.persistentLabDate.remove(at: place)
+               
+                labList.remove(at: place)
+                
+            }
+            place = place + 1
+        }
+        self.persistentLab.archive(fileName: "testLab")
+        tableView.reloadData()
+        place = 0
 
         // Do any additional setup after loading the view, typically from a null.
     }

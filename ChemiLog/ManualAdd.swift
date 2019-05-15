@@ -8,23 +8,36 @@
 
 import Foundation
 import UIKit
+var pickerDataLab: [String] = [String]()
 
-class ManualAddController: UIViewController, UITextFieldDelegate {
+class ManualAddController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var nameIn: UITextField!
     @IBOutlet weak var catalogIn: UITextField!
     @IBOutlet weak var quantityIn: UITextField!
     @IBOutlet weak var lastRefillIn: UITextField!
     @IBOutlet weak var nextUseIn: UITextField!
-    @IBOutlet weak var labUsedIn: UITextField!
+    @IBOutlet weak var labPicker: UIPickerView!
     @IBOutlet weak var amountIn: UITextField!
     
     
     var activeTextField: UITextField!
     
     var newChem = Chemical.init(quantity: 20, name: "", catalogNumber: "b023", lastRefill: "", nextRefill: "", usedLabs: "", icon: "", amount: 20)
+    var persistentLabAdd = persistentDataLab()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.labPicker.delegate = self
+        self.labPicker.dataSource = self
+        
+        persistentLabAdd.restore(fileName: "testLab")
+        if persistentLabAdd.persistentClassName.count > 0{
+            for num in 0...persistentLabAdd.persistentClassName.count - 1{
+                let persistentLabPicker = Lab(labDate: persistentLabAdd.persistentLabDate[num], labName: persistentLabAdd.persistentLabName[num], className: persistentLabAdd.persistentClassName[num], chemicalUsed: persistentLabAdd.persistentChemicalUsed[num], quantity: persistentLabAdd.persistentQuantity[num], labType: persistentLabAdd.persistentLabType[num], notify: persistentLabAdd.persistentNotify[num])
+                pickerDataLab.append(persistentLabPicker.labName)
+            }
+        }
         let center: NotificationCenter = NotificationCenter.default;
         center.addObserver(self, selector: #selector(keyboardDidShow(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
         center.addObserver(self, selector: #selector(keyboardWillHide(notification: )), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -38,8 +51,6 @@ class ManualAddController: UIViewController, UITextFieldDelegate {
          lastRefillIn.returnKeyType = .done
         nextUseIn.addTarget(self, action: #selector(textFieldClicked(_:)), for: .touchDown)
          nextUseIn.returnKeyType = .done
-        labUsedIn.addTarget(self, action: #selector(textFieldClicked(_:)), for: .touchDown)
-         labUsedIn.returnKeyType = .done
         nameIn.addTarget(self, action: #selector(textFieldClicked(_:)), for: .touchDown)
          nameIn.returnKeyType = .done
     }
@@ -84,9 +95,6 @@ class ManualAddController: UIViewController, UITextFieldDelegate {
         amountIn.resignFirstResponder()
     }
     
-    @IBAction func LabInReturn(_ sender: Any) {
-        labUsedIn.resignFirstResponder()
-    }
     @IBAction func QuantityInReturn(_ sender: Any) {
         quantityIn.resignFirstResponder()
     }
@@ -104,7 +112,22 @@ class ManualAddController: UIViewController, UITextFieldDelegate {
     }
     
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
     
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerDataLab.count
+    }
+    
+    // The data to return for the row and component (column) that's being passed in
+    private func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return pickerDataLab[row]
+    }
     
     
     
