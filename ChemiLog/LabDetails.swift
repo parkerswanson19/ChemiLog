@@ -11,6 +11,7 @@ import UIKit
 
 var chemicalPickerSpot = 0
 
+
 class LabDetailsController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     @IBOutlet weak var detailNameLab: UITextField!
     @IBOutlet weak var detailLabDate: UIDatePicker!
@@ -31,8 +32,19 @@ class LabDetailsController: UIViewController, UIPickerViewDelegate, UIPickerView
     var place = 0
     var currDate = Date.init(timeIntervalSinceNow: 0)
     
+    var activeTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let center: NotificationCenter = NotificationCenter.default;
+        center.addObserver(self, selector: #selector(keyboardDidShow(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
+        center.addObserver(self, selector: #selector(keyboardWillHide(notification: )), name: UIResponder.keyboardWillHideNotification, object: nil)
+        detailAmountUsedLab.addTarget(self, action: #selector(textFieldClicked(_:)), for: .touchDown)
+        detailAmountUsedLab.returnKeyType = .done
+        detailNameLab.addTarget(self, action: #selector(textFieldClicked(_:)), for: .touchDown)
+        detailNameLab.returnKeyType = .done
+        detailClassLab.addTarget(self, action: #selector(textFieldClicked(_:)), for: .touchDown)
+        detailClassLab.returnKeyType = .done
         self.detailChemicalLab.delegate = self
         self.detailChemicalLab.dataSource = self
         
@@ -79,10 +91,60 @@ class LabDetailsController: UIViewController, UIPickerViewDelegate, UIPickerView
         return pickerData.count
     }
     
+    
     // The data to return for the row and component (column) that's being passed in
     private func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return pickerData[row]
     }
+    @objc func keyboardDidShow(notification: Notification){
+        print("SHOW ME")
+        let info: NSDictionary = notification.userInfo! as NSDictionary
+        let keyboardSize = (info[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue.size
+        let keyboardY = self.view.frame.size.height - keyboardSize.height
+        let editingTextFieldY = self.activeTextField!.frame.origin.y
+        
+        if self.view.frame.origin.y >= 0 {
+            print("Will move now")
+            if editingTextFieldY > keyboardY - 60 {
+                UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {self.view.frame = CGRect(x: 0, y: self.view.frame.origin.y - (editingTextFieldY - (keyboardY - 60)), width: self.view.bounds.width, height: self.view.bounds.height)}, completion: nil)
+            }
+            
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: Notification){
+        UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)}, completion: nil)
+        print ("storyboard")
+    }
+    
+    @objc func textFieldClicked(_ textField: UITextField){
+        print("selected text field")
+        activeTextField = textField
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    @IBAction func detailNameResign(_ sender: Any) {
+        detailNameLab.resignFirstResponder()
+    }
+    @IBAction func detailClassResign(_ sender: Any) {
+        detailClassLab.resignFirstResponder()
+    }
+    @IBAction func detailAmountResign(_ sender: Any) {
+        detailAmountUsedLab.resignFirstResponder()
+    }
+    
+    
+    
+    
+    
+    
 }
 
 
