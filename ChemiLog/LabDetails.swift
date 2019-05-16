@@ -33,6 +33,20 @@ class LabDetailsController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     var activeTextField: UITextField!
     
+    var id = 0
+    
+    @IBAction func reSubmitLab(_ sender: Any) {
+        labList[id].labName = detailNameLab.text ?? "no"
+        labList[id].labDate = detailLabDate.date
+        labList[id].className = detailClassLab.text ?? "no"
+       // labList[id].chemicalUsed = detailChemicalLab.
+        labList[id].quantity = Int(detailAmountUsedLab.text ?? "no") ?? 0
+        labList[id].notify = detailNotifyLab.isOn
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let center: NotificationCenter = NotificationCenter.default;

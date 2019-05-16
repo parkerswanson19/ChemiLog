@@ -19,7 +19,7 @@ class ChemicalDetailsController: UIViewController{
     @IBOutlet weak var detailNextRefill: UITextField!
     @IBOutlet weak var detailLabs: UITextField!
     @IBOutlet weak var detailAmount: UITextField!
-    //u see the lab now pussy?
+
     var id = 0
     var detailName2 = " "
     var detailQuantity2 = 100

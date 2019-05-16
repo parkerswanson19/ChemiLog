@@ -96,10 +96,13 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
         return tableCell
     }
 
+    @IBAction func toEditLab(_ sender: Any) {
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dvc = segue.destination as? LabDetailsController{
             if let tableCell = sender as? TableViewCell {
+                dvc.id = tableCell.tag
                 dvc.detailNameLab2 = labList[tableCell.tag].labName
                 dvc.detailLabDate2 = labList[tableCell.tag].labDate
                 dvc.detailClassLab2 = labList[tableCell.tag].className
