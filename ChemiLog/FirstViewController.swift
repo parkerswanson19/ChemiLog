@@ -10,7 +10,7 @@ import UIKit
 var deleteRow = true
 var chemicalList = [Chemical]()
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController{
     
     //Bool that determines if delete button is visible
     var deleteButtonExist : Bool = false
@@ -93,7 +93,7 @@ class FirstViewController: UIViewController {
                 senderVC.newChem.nextRefill = senderVC.nextUseIn.text ?? " "
                 senderVC.newChem.catalogLink = " "
                 senderVC.newChem.icon = "Flask"
-                senderVC.newChem.usedLabs = senderVC.labUsedIn.text ?? ""
+                senderVC.newChem.usedLabs = pickerDataLab[senderVC.labPicker.selectedRow(inComponent: 0)]
                 senderVC.newChem.amount = Int(senderVC.amountIn.text ?? "") ?? 0
             chemicalList.append(senderVC.newChem)
             persistentChemical.savedName.append(senderVC.newChem.name)

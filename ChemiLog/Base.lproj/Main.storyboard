@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -168,17 +168,6 @@
                                             <action selector="tapNextRefill:" destination="r4d-aj-9VN" eventType="primaryActionTriggered" id="gUs-qC-biA"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SK6-zD-gEF">
-                                        <rect key="frame" x="524" y="744" width="156" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.67757417799999997" green="1" blue="0.6228356732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
-                                        <connections>
-                                            <action selector="tapLab:" destination="r4d-aj-9VN" eventType="editingDidEnd" id="y7d-5z-43R"/>
-                                        </connections>
-                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="doj-Ep-Qh0">
                                         <rect key="frame" x="524" y="835" width="156" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -266,6 +255,10 @@
                                             <segue destination="2rt-EY-C1j" kind="unwind" unwindAction="toEditExistingChem:" id="YMl-dd-tBj"/>
                                         </connections>
                                     </button>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wid-tx-J4D">
+                                        <rect key="frame" x="488" y="719" width="228" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </pickerView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -284,17 +277,17 @@
                     <connections>
                         <outlet property="detailAmount" destination="doj-Ep-Qh0" id="6HP-yc-deX"/>
                         <outlet property="detailCatalog" destination="2ZR-Wu-q0w" id="j7M-Rx-H6F"/>
-                        <outlet property="detailLabs" destination="SK6-zD-gEF" id="wrs-Xk-Yrw"/>
                         <outlet property="detailLastRefill" destination="M9A-2K-MBD" id="x79-Sh-fgE"/>
                         <outlet property="detailName" destination="WSJ-a1-YDv" id="FiC-Fc-ULh"/>
                         <outlet property="detailNextRefill" destination="GP1-X1-ywt" id="J4g-mN-ZLv"/>
+                        <outlet property="detailPickerss" destination="Wid-tx-J4D" id="Fy8-R3-7Hc"/>
                         <outlet property="detailQuantity" destination="Uc3-MH-WEy" id="G74-Yh-WdY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5y-qI-3BC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="2rt-EY-C1j" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1629.4964028776978" y="-955.03597122302165"/>
+            <point key="canvasLocation" x="1628.90625" y="-955.07812499999989"/>
         </scene>
         <!--Manual Add-->
         <scene sceneID="Pwz-Yj-Edv">
@@ -402,17 +395,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Lab" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NBS-M9-ebP">
-                                <rect key="frame" x="467" y="694" width="156" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.67757417799999997" green="1" blue="0.6228356732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="LabInReturn:" destination="tEF-Us-GMc" eventType="primaryActionTriggered" id="xlH-FO-vyX"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzh-Bc-wK6">
                                 <rect key="frame" x="243" y="799" width="112" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -455,6 +437,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="flask-1"/>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SH2-7R-re7">
+                                <rect key="frame" x="451" y="670" width="188" height="96"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wrv-Fg-9Si"/>
@@ -462,7 +448,7 @@
                     <connections>
                         <outlet property="amountIn" destination="DyY-4U-jYY" id="ARQ-7C-Rny"/>
                         <outlet property="catalogIn" destination="uJk-35-eFp" id="mIO-kX-5Ta"/>
-                        <outlet property="labUsedIn" destination="NBS-M9-ebP" id="4r1-3J-0Zm"/>
+                        <outlet property="labPicker" destination="SH2-7R-re7" id="HdL-As-DST"/>
                         <outlet property="lastRefillIn" destination="yUG-K4-Hf8" id="x4q-6K-JH9"/>
                         <outlet property="nameIn" destination="SQ3-MV-HfE" id="9JG-xd-wYA"/>
                         <outlet property="nextUseIn" destination="Ssw-Ic-oTn" id="9Na-x5-Zfq"/>

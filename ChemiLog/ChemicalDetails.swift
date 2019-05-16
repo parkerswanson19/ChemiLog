@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ChemicalDetailsController: UIViewController{
+class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+
+    
     
     var activeTextField: UITextField!
    
@@ -17,9 +19,12 @@ class ChemicalDetailsController: UIViewController{
     @IBOutlet weak var detailCatalog: UITextField!
     @IBOutlet weak var detailLastRefill: UITextField!
     @IBOutlet weak var detailNextRefill: UITextField!
-    @IBOutlet weak var detailLabs: UITextField!
-    @IBOutlet weak var detailAmount: UITextField!
 
+    @IBOutlet weak var detailPickerss: UIPickerView!
+    @IBOutlet weak var detailAmount: UITextField!
+    
+    
+    var persistentLabs = persistentDataLab()
     var id = 0
     var detailName2 = " "
     var detailQuantity2 = 100
@@ -29,6 +34,9 @@ class ChemicalDetailsController: UIViewController{
     var detailLabs2 = " "
     var detailAmount2 = 1
     var detailCatalogLink2 = URL(string: "blah")
+    var pickerDataLabs2: [String] = [String]()
+    var selectedLab = 0
+    var place = 0
     var persistentNewChemical = persistentData()
     var chemiList = [Chemical]()
     
@@ -43,7 +51,7 @@ class ChemicalDetailsController: UIViewController{
          chemicalList[id].catalogNumber = detailCatalog.text ?? "no"
          chemicalList[id].lastRefill = detailLastRefill.text ?? "no"
          chemicalList[id].nextRefill = detailNextRefill.text ?? "no"
-         chemicalList[id].usedLabs = detailLabs.text ?? "no"
+         chemicalList[id].usedLabs = detailPickerss.description
          chemicalList[id].amount = Int(detailAmount.text ?? "no") ?? 0
         persistentNewChemical.savedName[id] = chemicalList[id].name
         persistentNewChemical.savedQuantity[id] = chemicalList[id].quantity
@@ -58,6 +66,23 @@ class ChemicalDetailsController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.detailPickerss.delegate = self
+        self.detailPickerss.dataSource = self
+        
+        persistentLabs.restore(fileName: "testLab")
+        if persistentLabs.persistentClassName.count > 0{
+            for num in 0...persistentLabs.persistentClassName.count - 1{
+                let persistentLabPicker = Lab(labDate: persistentLabs.persistentLabDate[num], labName: persistentLabs.persistentLabName[num], className: persistentLabs.persistentClassName[num], chemicalUsed: persistentLabs.persistentChemicalUsed[num], quantity: persistentLabs.persistentQuantity[num], labType: persistentLabs.persistentLabType[num], notify: persistentLabs.persistentNotify[num])
+                pickerDataLabs2.append(persistentLabPicker.labName)
+            }
+        }
+        
+        for name in pickerDataLabs2{
+            
+            if name == detailLabs2.description {
+                selectedLab = place
+            }
+            place = place + 1
         persistentNewChemical.restore(fileName: "test1")
         if persistentNewChemical.savedName.count > 0{
             for num in 0...persistentNewChemical.savedName.count - 1{
@@ -65,14 +90,19 @@ class ChemicalDetailsController: UIViewController{
                 chemiList.append(persistentChemicalNew)
             }
         }
+
         print(detailName2)
         detailName.text! = detailName2
         detailQuantity.text! = String(detailQuantity2)
         detailCatalog.text! = detailCatalog2
         detailLastRefill.text! = detailLastRefill2
         detailNextRefill.text! = detailNextRefill2
-        detailLabs.text! = detailLabs2
+        detailPickerss.selectRow(selectedLab, inComponent: 0, animated: true)
         detailAmount.text! = String(detailAmount2)
+
+        
+    }
+
         let center: NotificationCenter = NotificationCenter.default;
         center.addObserver(self, selector: #selector(keyboardDidShow(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
         center.addObserver(self, selector: #selector(keyboardWillHide(notification: )), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -84,8 +114,6 @@ class ChemicalDetailsController: UIViewController{
         detailLastRefill.returnKeyType = .done
         detailNextRefill.addTarget(self, action: #selector(textFieldClicked(_:)), for: .touchDown)
         detailNextRefill.returnKeyType = .done
-        detailLabs.addTarget(self, action: #selector(textFieldClicked(_:)), for: .touchDown)
-        detailLabs.returnKeyType = .done
         detailAmount.addTarget(self, action: #selector(textFieldClicked(_:)), for: .touchDown)
         detailAmount.returnKeyType = .done
         detailQuantity.addTarget(self, action: #selector(textFieldClicked(_:)), for: .touchDown)
@@ -106,6 +134,23 @@ class ChemicalDetailsController: UIViewController{
             }
             
         }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerDataLabs2.count
+    }
+    
+    // The data to return for the row and component (column) that's being passed in
+    private func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return pickerDataLabs2[row]
     }
     
     @objc func keyboardWillHide(notification: Notification){
@@ -140,7 +185,7 @@ class ChemicalDetailsController: UIViewController{
         detailNextRefill.resignFirstResponder()
     }
     @IBAction func tapLab(_ sender: Any) {
-        detailLabs.resignFirstResponder()
+        detailPickerss.resignFirstResponder()
     }
     @IBAction func tapAmount(_ sender: Any) {
         detailAmount.resignFirstResponder()
