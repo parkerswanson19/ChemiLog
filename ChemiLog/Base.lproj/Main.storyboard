@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -673,6 +673,7 @@
                                 <connections>
                                     <action selector="reSubmitLab:" destination="reN-BL-Yvc" eventType="touchUpInside" id="yHn-yF-CmS"/>
                                     <action selector="toEditLab:" destination="xJS-nN-Alf" eventType="touchUpInside" id="bLi-kn-0Ue"/>
+                                    <segue destination="xJS-nN-Alf" kind="unwind" unwindAction="toEditExistingLab:" id="mVv-vA-Ytc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -686,7 +687,6 @@
                         <outlet property="detailLabDate" destination="Jbz-EX-QwQ" id="A6K-w6-MQA"/>
                         <outlet property="detailNameLab" destination="hw9-Dm-WqR" id="JGs-dk-mLD"/>
                         <outlet property="detailNotifyLab" destination="xPk-la-HXF" id="EFI-kl-8DM"/>
-                        <outlet property="reSubmitLab" destination="aCv-fB-oDS" id="6ge-sJ-MkL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esA-S7-SkB" userLabel="First Responder" sceneMemberID="firstResponder"/>

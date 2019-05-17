@@ -67,10 +67,15 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.persistentLab.archive(fileName: "testLab")
         tableView.reloadData()
         place = 0
+ 
 
         // Do any additional setup after loading the view, typically from a null.
     }
     @IBAction func toThirdView(unwindSegue: UIStoryboardSegue){}
+    @IBAction func toEditExistingLab(_ sender: UIStoryboardSegue)
+    {
+        tableView.reloadData()
+    }
     
     @IBAction func toSubmitNewLab(_ sender: UIStoryboardSegue)
     {
