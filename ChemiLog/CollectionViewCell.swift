@@ -23,6 +23,7 @@ class CollectionViewCell: UICollectionViewCell{
     
     @IBOutlet weak var chemicalName: UILabel!
     
+    @IBOutlet weak var shownIcon: UIImageView!
     @IBAction func deleteChemical(_ sender: Any){
         classDeleteAttempt = true
         NotificationCenter.default.post(name: Notification.Name("alert"), object: nil)
