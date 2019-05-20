@@ -51,8 +51,10 @@ class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPicke
          chemicalList[id].catalogNumber = detailCatalog.text ?? "no"
          chemicalList[id].lastRefill = detailLastRefill.text ?? "no"
          chemicalList[id].nextRefill = detailNextRefill.text ?? "no"
-         chemicalList[id].usedLabs = detailPickerss.description
+         //chemicalList[id].usedLabs = pickerDataLab[chemicalList[id].usedLabs.selectedRow(inComponent: 0)]
+         chemicalList[id].usedLabs = pickerDataLabs2[detailPickerss.selectedRow(inComponent: 0)]
          chemicalList[id].amount = Int(detailAmount.text ?? "no") ?? 0
+        print(chemicalList[id].usedLabs)
         persistentNewChemical.savedName[id] = chemicalList[id].name
         persistentNewChemical.savedQuantity[id] = chemicalList[id].quantity
         persistentNewChemical.savedCatalogNumber[id] = chemicalList[id].catalogNumber

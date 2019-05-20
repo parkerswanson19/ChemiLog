@@ -74,7 +74,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func toThirdView(unwindSegue: UIStoryboardSegue){}
     @IBAction func toEditExistingLab(_ sender: UIStoryboardSegue)
     {
-        tableView.reloadData()
+        //tableView.reloadData()
     }
     
     @IBAction func toSubmitNewLab(_ sender: UIStoryboardSegue)

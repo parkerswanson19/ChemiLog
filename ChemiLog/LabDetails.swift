@@ -31,6 +31,8 @@ class LabDetailsController: UIViewController, UIPickerViewDelegate, UIPickerView
     var selectedChem = 0
     var place = 0
     var currDate = Date.init(timeIntervalSinceNow: 0)
+    var persistentNewLab = persistentDataLab()
+    var labsList = [Lab]()
     
     var activeTextField: UITextField!
     
@@ -40,16 +42,32 @@ class LabDetailsController: UIViewController, UIPickerViewDelegate, UIPickerView
         labList[id].labName = detailNameLab.text ?? "no"
         labList[id].labDate = detailLabDate.date
         labList[id].className = detailClassLab.text ?? "no"
-       // labList[id].chemicalUsed = detailChemicalLab.
+        labList[id].chemicalUsed = pickerData[detailChemicalLab.selectedRow(inComponent: 0)]
         labList[id].quantity = Int(detailAmountUsedLab.text ?? "no") ?? 0
         labList[id].notify = detailNotifyLab.isOn
-        
+        print(labList[id].chemicalUsed)
+        persistentNewLab.persistentLabName[id] = labList[id].labName
+        persistentNewLab.persistentLabDate[id] = labList[id].labDate
+        persistentNewLab.persistentClassName[id] = labList[id].className
+        persistentNewLab.persistentQuantity[id] = labList[id].quantity
+        persistentNewLab.persistentNotify[id] = labList[id].notify
+        persistentNewLab.persistentChemicalUsed[id] = labList[id].chemicalUsed
+        persistentNewLab.archive(fileName: "testLab")
     }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        persistentNewLab.restore(fileName: "testLab")
+        if persistentNewLab.persistentClassName.count > 0{
+            for num in 0...persistentNewLab.persistentClassName.count - 1{
+                let persistentLabPicker = Lab(labDate: persistentNewLab.persistentLabDate[num], labName: persistentNewLab.persistentLabName[num], className: persistentNewLab.persistentClassName[num], chemicalUsed: persistentNewLab.persistentChemicalUsed[num], quantity: persistentNewLab.persistentQuantity[num], labType: persistentNewLab.persistentLabType[num], notify: persistentNewLab.persistentNotify[num])
+                labList.append(persistentLabPicker)
+            }
+        }
+        
         let center: NotificationCenter = NotificationCenter.default;
         center.addObserver(self, selector: #selector(keyboardDidShow(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
         center.addObserver(self, selector: #selector(keyboardWillHide(notification: )), name: UIResponder.keyboardWillHideNotification, object: nil)
