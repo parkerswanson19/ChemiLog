@@ -92,7 +92,7 @@ class FirstViewController: UIViewController{
                 senderVC.newChem.lastRefill = senderVC.lastRefillIn.text ?? " "
                 senderVC.newChem.nextRefill = senderVC.nextUseIn.text ?? " "
                 senderVC.newChem.catalogLink = " "
-                senderVC.newChem.icon = "Flask"
+                senderVC.newChem.icon = senderVC.finalIcon
                 senderVC.newChem.usedLabs = pickerDataLab[senderVC.labPicker.selectedRow(inComponent: 0)]
                 senderVC.newChem.amount = Int(senderVC.amountIn.text ?? "") ?? 0
             chemicalList.append(senderVC.newChem)
@@ -127,6 +127,7 @@ extension FirstViewController: UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         cell.chemicalName.text = chemicalList[indexPath.row].name
+        cell.shownIcon.image = UIImage(named: chemicalList[indexPath.row].icon)
         cell.index = indexPath
         cell.parentView = self
         cell.tag = indexPath.row

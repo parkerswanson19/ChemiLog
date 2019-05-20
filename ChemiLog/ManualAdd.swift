@@ -19,10 +19,46 @@ class ManualAddController: UIViewController, UITextFieldDelegate, UIPickerViewDe
     @IBOutlet weak var labPicker: UIPickerView!
     @IBOutlet weak var amountIn: UITextField!
     
+    @IBOutlet weak var icon1: UIButton!
+    @IBOutlet weak var icon2: UIButton!
+    @IBOutlet weak var icon3: UIButton!
+    
+    var finalIcon = "flask"
+    
+    @IBAction func button1Tapped(_ sender: Any) {
+        icon1.isSelected = true
+        icon2.isSelected = false
+        icon3.isSelected = false
+        finalIcon = "flask-1"
+        icon1.isEnabled = false
+        icon2.isEnabled = true
+        icon3.isEnabled = true
+    }
+    @IBAction func button2Tapped(_ sender: Any) {
+        icon1.isSelected = false
+        icon2.isSelected = true
+        icon3.isSelected = false
+        finalIcon = "flask"
+        icon2.isEnabled = false
+        icon1.isEnabled = true
+        icon3.isEnabled = true
+    }
+    @IBAction func button3Tapped(_ sender: Any) {
+        icon1.isSelected = false
+        icon2.isSelected = false
+        icon3.isSelected = true
+        finalIcon = "potion"
+        icon3.isEnabled = false
+        icon1.isEnabled = true
+        icon2.isEnabled = true
+    }
+    
+    
+    
     
     var activeTextField: UITextField!
     
-    var newChem = Chemical.init(quantity: 20, name: "", catalogNumber: "b023", lastRefill: "", nextRefill: "", usedLabs: "", icon: "", amount: 20)
+    var newChem = Chemical.init(quantity: 20, name: "", catalogNumber: "b023", lastRefill: "", nextRefill: "", usedLabs: "", icon: "flask", amount: 20)
     var persistentLabAdd = persistentDataLab()
 
     
@@ -30,6 +66,7 @@ class ManualAddController: UIViewController, UITextFieldDelegate, UIPickerViewDe
         super.viewDidLoad()
         self.labPicker.delegate = self
         self.labPicker.dataSource = self
+        
         
         persistentLabAdd.restore(fileName: "testLab")
         if persistentLabAdd.persistentClassName.count > 0{

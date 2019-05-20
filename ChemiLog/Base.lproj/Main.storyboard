@@ -89,6 +89,7 @@
                                         <connections>
                                             <outlet property="chemicalName" destination="Zv2-es-yaa" id="SFM-s0-pdd"/>
                                             <outlet property="deleteButton" destination="hR5-Ow-Jxp" id="99L-MJ-PyK"/>
+                                            <outlet property="shownIcon" destination="Q8s-L1-gu2" id="wMG-I9-RRa"/>
                                             <segue destination="r4d-aj-9VN" kind="show" identifier="showChemDetails" id="NOX-j7-qwj"/>
                                         </connections>
                                     </collectionViewCell>
@@ -422,20 +423,29 @@
                                     <segue destination="BLP-Cb-e3q" kind="unwind" unwindAction="toSubmitNewChem:" id="dVO-pC-8WE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agj-a7-Oc5">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agj-a7-Oc5">
                                 <rect key="frame" x="322" y="133" width="125" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="flask"/>
+                                <connections>
+                                    <action selector="button2Tapped:" destination="tEF-Us-GMc" eventType="touchUpInside" id="AtM-oG-4H9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy7-DY-blH">
                                 <rect key="frame" x="484" y="133" width="125" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="potion"/>
+                                <connections>
+                                    <action selector="button3Tapped:" destination="tEF-Us-GMc" eventType="touchUpInside" id="d1v-lA-Tiu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pu6-l8-578">
                                 <rect key="frame" x="144" y="133" width="125" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="flask-1"/>
+                                <connections>
+                                    <action selector="button1Tapped:" destination="tEF-Us-GMc" eventType="touchUpInside" id="gEK-WB-BM9"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SH2-7R-re7">
                                 <rect key="frame" x="451" y="670" width="188" height="96"/>
@@ -448,6 +458,9 @@
                     <connections>
                         <outlet property="amountIn" destination="DyY-4U-jYY" id="ARQ-7C-Rny"/>
                         <outlet property="catalogIn" destination="uJk-35-eFp" id="mIO-kX-5Ta"/>
+                        <outlet property="icon1" destination="pu6-l8-578" id="tos-zt-pFB"/>
+                        <outlet property="icon2" destination="Agj-a7-Oc5" id="ZwF-iv-c8R"/>
+                        <outlet property="icon3" destination="xy7-DY-blH" id="GwR-oS-936"/>
                         <outlet property="labPicker" destination="SH2-7R-re7" id="HdL-As-DST"/>
                         <outlet property="lastRefillIn" destination="yUG-K4-Hf8" id="x4q-6K-JH9"/>
                         <outlet property="nameIn" destination="SQ3-MV-HfE" id="9JG-xd-wYA"/>
