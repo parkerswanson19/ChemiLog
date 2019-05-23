@@ -41,7 +41,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
         }
         
-        for lab in labList{
+        /*for lab in labList{
             if lab.labDate < currDate{
                 for chem in chemList{
                     if chem.name == persistentLab.persistentChemicalUsed[place]{
@@ -64,9 +64,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
             place = place + 1
         }
-        self.persistentLab.archive(fileName: "testLab")
-        tableView.reloadData()
-        place = 0
+        self.persistentLab.archive(fileName: "testLab")*/
  
 
         // Do any additional setup after loading the view, typically from a null.
@@ -97,7 +95,8 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
         persistentLab.persistentLabDate.append(senderVC.newLab.labDate)
         persistentLab.archive(fileName: "testLab")
 
-        }
+        } //git config --global user.email "maverickhedlund@gmail.com"
+        //git config --global user.name "Maverick Hedlund"
         tableView.reloadData()
     }
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

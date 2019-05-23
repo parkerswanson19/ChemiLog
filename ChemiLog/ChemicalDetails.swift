@@ -23,6 +23,41 @@ class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var detailPickerss: UIPickerView!
     @IBOutlet weak var detailAmount: UITextField!
     
+    @IBOutlet weak var icon1: UIButton!
+    @IBOutlet weak var icon2: UIButton!
+    @IBOutlet weak var icon3: UIButton!
+    
+    
+    var finalIcon = "flask"
+    
+    @IBAction func button1Tapped(_ sender: Any) {
+        icon1.isSelected = true
+        icon2.isSelected = false
+        icon3.isSelected = false
+        finalIcon = "flask-1"
+        icon1.isEnabled = false
+        icon2.isEnabled = true
+        icon3.isEnabled = true
+    }
+    @IBAction func button2Tapped(_ sender: Any) {
+        icon1.isSelected = false
+        icon2.isSelected = true
+        icon3.isSelected = false
+        finalIcon = "flask"
+        icon2.isEnabled = false
+        icon1.isEnabled = true
+        icon3.isEnabled = true
+    }
+    @IBAction func button3Tapped(_ sender: Any) {
+        icon1.isSelected = false
+        icon2.isSelected = false
+        icon3.isSelected = true
+        finalIcon = "potion"
+        icon3.isEnabled = false
+        icon1.isEnabled = true
+        icon2.isEnabled = true
+    }
+    
     
     var persistentLabs = persistentDataLab()
     var id = 0
@@ -54,6 +89,7 @@ class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPicke
          //chemicalList[id].usedLabs = pickerDataLab[chemicalList[id].usedLabs.selectedRow(inComponent: 0)]
          chemicalList[id].usedLabs = pickerDataLabs2[detailPickerss.selectedRow(inComponent: 0)]
          chemicalList[id].amount = Int(detailAmount.text ?? "no") ?? 0
+        chemicalList[id].icon = finalIcon
         print(chemicalList[id].usedLabs)
         persistentNewChemical.savedName[id] = chemicalList[id].name
         persistentNewChemical.savedQuantity[id] = chemicalList[id].quantity
@@ -62,6 +98,7 @@ class ChemicalDetailsController: UIViewController, UIPickerViewDelegate, UIPicke
         persistentNewChemical.savedNextRefill[id] = chemicalList[id].nextRefill
         persistentNewChemical.savedUsedLabs[id] = chemicalList[id].usedLabs
         persistentNewChemical.savedAmount[id] = chemicalList[id].amount
+         persistentNewChemical.savedIcon[id] = chemicalList[id].icon
         persistentNewChemical.archive(fileName: "test1")
     }
     
