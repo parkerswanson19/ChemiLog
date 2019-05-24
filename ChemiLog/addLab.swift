@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 var pickerData: [String] = [String]()
 
+
 class AddLabController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
     
@@ -31,7 +32,7 @@ class AddLabController: UIViewController, UIPickerViewDelegate, UIPickerViewData
         self.chemicalIn.delegate = self
         self.chemicalIn.dataSource = self
 
-        
+        pickerData.append("start")
         persistentChemicalsAdd.restore(fileName: "test1")
         if persistentChemicalsAdd.savedName.count > 0{
             for num in 0...persistentChemicalsAdd.savedName.count - 1{

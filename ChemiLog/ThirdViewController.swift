@@ -43,14 +43,8 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         /*for lab in labList{
             if lab.labDate < currDate{
-                for chem in chemList{
-                    if chem.name == persistentLab.persistentChemicalUsed[place]{
-                        self.persistentChemical4.savedQuantity[place2] = self.persistentChemical4.savedQuantity[place2] - self.persistentLab.persistentQuantity[place]
-                        self.persistentChemical4.archive(fileName: "test1")
-                    }
-                    place2 = place2 + 1
-                }
-                place2 = 0
+
+
                 self.persistentLab.persistentLabName.remove(at: place)
                 self.persistentLab.persistentClassName.remove(at: place)
                 self.persistentLab.persistentQuantity.remove(at: place)
@@ -64,6 +58,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
             place = place + 1
         }
+         place = 0
         self.persistentLab.archive(fileName: "testLab")*/
  
 
@@ -95,8 +90,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
         persistentLab.persistentLabDate.append(senderVC.newLab.labDate)
         persistentLab.archive(fileName: "testLab")
 
-        } //git config --global user.email "maverickhedlund@gmail.com"
-        //git config --global user.name "Maverick Hedlund"
+        }
         tableView.reloadData()
     }
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
